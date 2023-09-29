@@ -66,17 +66,35 @@ This code sets the styling properties for an element with the id "app". It sets 
 
 <br/>
 
-This code snippet includes a set of HTML meta tags, a title, a CSS link, and a JavaScript script tag. The `meta` tags specify the character encoding and the viewport settings for the webpage. The `title` tag sets the title of the webpage. The `link` tag links an external CSS file called "style.css" to apply styles to the webpage. The `script` tag includes an external JavaScript file called "script.js" with the `type` attribute set to "module", indicating that the JavaScript code is written using ES6 modules.
+This code snippet sets the `font-size`, `line-height`, `width`, `height`, `margin`, and `text-transform` properties for the `h1` element within an app. It uses custom CSS variables (`--fontSize` and `--lineHeight`) to define the values for `font-size` and `line-height`. The `width` is set to `auto`, the `height` is calculated using the `calc()` function, the `line-height` is set to the custom CSS variable, and the `margin` is calculated using the `calc()` function. The `text-transform` property is set to `uppercase`.
+
+<!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
+
+### 📄 particle/style.css
+
+```css
+18     #app h1 {
+19     	--fontSize: 60px;
+20     	--lineHeight: 80px;
+21     	width: auto;
+22     	height: calc(2 * var(--lineHeight));
+23     	line-height: var(--lineHeight);
+24     	margin: calc(50vh - var(--lineHeight)) auto 0;
+25     	font-size: var(--fontSize);
+26     	text-transform: uppercase;
+27     }
+```
+
+<br/>
+
+This code snippet is an HTML document that includes a stylesheet (`style.css`) and a JavaScript file (`script.js`) as external resources. It also sets the document's title to "Some" and specifies the character encoding and viewport settings.
 
 <!-- NOTE-swimm-snippet: the lines below link your snippet to Swimm -->
 
 ### 📄 particle/index.html
 
 ```html
-5 <meta charset="UTF-8" /> 6
-<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 7
-<title>Some</title> 8 <link rel="stylesheet" href="style.css" /> 9
-<script src="script.js" type="module"></script>
+2
 ```
 
 <br/>
