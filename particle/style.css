@@ -39,3 +39,10 @@ html,
 	z-index: -1;
 	top: 0;
 }
+
+.code-tooltip {
+	position: relative;
+	cursor: pointer;
+	color: blue; /* Change the color as needed */
+	text-decoration: underline;
+}
