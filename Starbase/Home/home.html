@@ -1,3 +1,18 @@
+<!--
+  * This is the home page of the website.
+  * It contains the following sections:
+    * Navigation bar
+      * Logo
+      * Menu
+      * Social media icons
+    * Hero section
+    * Services section
+      * About us
+      * What we offer
+    * Footer section
+      * Location
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,11 +22,18 @@
     <meta name="keywords" content="restaurant, creative, html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Favicon -->
+
     <link href="img/logo.jpeg" rel="shortcut icon" />
+
+    <!-- Google Font -->
+
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap"
       rel="stylesheet"
     />
+
+    <!-- Stylesheets -->
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -22,84 +44,27 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/ionicons.min.css" />
 
-    <script nonce="b3451030-54b2-447a-9bcf-c29babb905d2">
-      (function (w, d) {
-        !(function (dk, dl, dm, dn) {
-          dk[dm] = dk[dm] || {};
-          dk[dm].executed = [];
-          dk.zaraz = { deferred: [], listeners: [] };
-          dk.zaraz.q = [];
-          dk.zaraz._f = function (dp) {
-            return function () {
-              var dq = Array.prototype.slice.call(arguments);
-              dk.zaraz.q.push({ m: dp, a: dq });
-            };
-          };
-          for (const dr of ["track", "set", "debug"])
-            dk.zaraz[dr] = dk.zaraz._f(dr);
-          dk.zaraz.init = () => {
-            var ds = dl.getElementsByTagName(dn)[0],
-              dt = dl.createElement(dn),
-              du = dl.getElementsByTagName("title")[0];
-            du && (dk[dm].t = dl.getElementsByTagName("title")[0].text);
-            dk[dm].x = Math.random();
-            dk[dm].w = dk.screen.width;
-            dk[dm].h = dk.screen.height;
-            dk[dm].j = dk.innerHeight;
-            dk[dm].e = dk.innerWidth;
-            dk[dm].l = dk.location.href;
-            dk[dm].r = dl.referrer;
-            dk[dm].k = dk.screen.colorDepth;
-            dk[dm].n = dl.characterSet;
-            dk[dm].o = new Date().getTimezoneOffset();
-            if (dk.dataLayer)
-              for (const dy of Object.entries(
-                Object.entries(dataLayer).reduce((dz, dA) => ({
-                  ...dz[1],
-                  ...dA[1],
-                }))
-              ))
-                zaraz.set(dy[0], dy[1], { scope: "page" });
-            dk[dm].q = [];
-            for (; dk.zaraz.q.length; ) {
-              const dB = dk.zaraz.q.shift();
-              dk[dm].q.push(dB);
-            }
-            dt.defer = !0;
-            for (const dC of [localStorage, sessionStorage])
-              Object.keys(dC || {})
-                .filter((dE) => dE.startsWith("_zaraz_"))
-                .forEach((dD) => {
-                  try {
-                    dk[dm]["z_" + dD.slice(7)] = JSON.parse(dC.getItem(dD));
-                  } catch {
-                    dk[dm]["z_" + dD.slice(7)] = dC.getItem(dD);
-                  }
-                });
-            dt.referrerPolicy = "origin";
-            dt.src =
-              "../../cdn-cgi/zaraz/sd0d9.js?z=" +
-              btoa(encodeURIComponent(JSON.stringify(dk[dm])));
-            ds.parentNode.insertBefore(dt, ds);
-          };
-          ["complete", "interactive"].includes(dl.readyState)
-            ? zaraz.init()
-            : dk.addEventListener("DOMContentLoaded", zaraz.init);
-        })(w, d, "zarazData", "script");
-      })(window, document);
-    </script>
   </head>
+
+  <!-- Body -->
 
   <body>
     <div id="preloder">
       <div class="loader"></div>
     </div>
 
+    <!-- Header section -->
+
     <header class="header-section">
+
+      <!-- Navigation bar -->
+
       <div class="header-warp">
         <div class="site-logo">
           <h2>STARBASE</h2>
         </div>
+
+        <!-- Menu -->
 
         <div class="nav-switch">
           <i class="fa fa-bars"></i>
@@ -114,6 +79,9 @@
           <li><a href="#">PARLOR</a></li>
           <li><a href="#">LOGIN</a></li>
         </ul>
+
+        <!-- Social media icons -->
+
         <div class="header-right">
           <div
             class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center"
@@ -134,6 +102,8 @@
       </div>
     </header>
 
+    <!-- Hero section-->
+
     <section class="hero-section">
       <div class="hero-slider owl-carousel">
         <div class="hs-item set-bg" data-setbg="img/slider/bg_2.jpg">
@@ -146,6 +116,8 @@
           </div>
         </div>
     </section>
+
+    <!-- Services section -->
 
     <section class="services-section spad">
       <div class="container">
@@ -160,6 +132,9 @@
             equipped with cutting edge technology and magnificent ambience.
           </h2>
         </div>
+
+        <!-- What we offer -->
+
         <div class="about-us">
           <h1>What we offer</h1>
         </div>
@@ -220,6 +195,8 @@
       </div>
     </section>
 
+    <!-- Footer section -->
+
     <footer class="footer-section">
       <div class="upper">
         <h1>GET IN TOUCH TODAY</h1>
@@ -246,6 +223,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- All jQuery Plugins  -->
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
