@@ -772,10 +772,6 @@ footer .lower .boxes {
 }
 
 @media only screen and (max-width: 1779px) {
-  .main-menu {
-    padding-right: 150px;
-  }
-
   .main-menu li a {
     margin-left: 20px;
   }
