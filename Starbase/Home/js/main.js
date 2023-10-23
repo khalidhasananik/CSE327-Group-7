@@ -33,15 +33,15 @@ $(window).on('load', function () {
 		Hero Slider
 	--------------------*/
 	$('.hero-slider').owlCarousel({
-		loop: false,
+		loop: true,
 		nav: false,
 		dots: true,
-		mouseDrag: false,
+		mouseDrag: true,
 		animateOut: 'fadeOut',
 		animateIn: 'fadeIn',
 		items: 1,
 		margin: 0,
-		autoplay: false
+		autoplay: true
 	}).on('changed.owl.carousel', function (event) {
 		$('.hero-slider .owl-dots:last-child').remove();
 		currentHSnumber();
@@ -65,6 +65,62 @@ $(window).on('load', function () {
 	}
 	currentHSnumber();
 
+
+
+	/*------------------
+		Brands Slider
+	--------------------*/
+	$('.brands-slider').owlCarousel({
+		loop: true,
+		nav: false,
+		dots: false,
+		margin: 40,
+		autoplay: true,
+		responsive: {
+			0: {
+				items: 2,
+			},
+			480: {
+				items: 3,
+			},
+			768: {
+				items: 5,
+			}
+		}
+	});
+
+
+
+	/*------------------
+		Circle progress
+	--------------------*/
+	$('.circle-progress').each(function () {
+		var cpvalue = $(this).data("cpvalue");
+		var cpcolor = $(this).data("cpcolor");
+		var cpid = $(this).data("cpid");
+
+		$(this).append('<div class="' + cpid + '"></div><div class="progress-value"><h3>' + cpvalue + '%</h3></div>');
+
+		if (cpvalue < 100) {
+
+			$('.' + cpid).circleProgress({
+				value: '0.' + cpvalue,
+				size: 123,
+				thickness: 6,
+				fill: cpcolor,
+				emptyFill: "rgba(0, 0, 0, 0)"
+			});
+		} else {
+			$('.' + cpid).circleProgress({
+				value: 1,
+				size: 240,
+				thickness: 3,
+				fill: cpcolor,
+				emptyFill: "rgba(0, 0, 0, 0)"
+			});
+		}
+
+	});
 
 })(jQuery);
 
