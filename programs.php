@@ -1,20 +1,27 @@
+<!-- Programs Page of the Website -->
+
+<!-- Including the PHP Files -->
 <?php
 include './config/db_connection.php';
 include './config/constants.php';
 ?>
 
+<!-- Code Begins -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Page Description -->
     <title>Programs - Starbase</title>
     <meta charset="UTF-8">
     <meta name="description" content="Restaurant">
     <meta name="keywords" content="restaurant, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Site Logo -->
     <link href="./Starbase/Program/img/logo.jpeg" rel="shortcut icon" />
 
+    <!-- Including the CSS Files -->
     <link rel="stylesheet" href="./Starbase/Program/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./Starbase/Program/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./Starbase/Program/css/flaticon.css" />
@@ -97,11 +104,12 @@ include './config/constants.php';
 </head>
 
 <body>
-
+    <!-- Preloader for when the site loads -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
+    <!-- Header Section -->
     <header class="header-section">
         <div class="header-warp">
             <div class="site-logo">
@@ -111,7 +119,7 @@ include './config/constants.php';
             <div class="nav-switch">
                 <i class="fa fa-bars"></i>
             </div>
-
+            <!-- Navigation Bar Links -->
             <ul class="main-menu">
                 <li><a href="./index.php">HOME</a></li>
                 <li><a href="./programs.php" class="active">PROGRAMS</a></li>
@@ -136,6 +144,8 @@ include './config/constants.php';
                 </li>
                 <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
             </ul>
+            <!-- Navigation Bar Links Ends -->
+            <!-- Header Right Side Icons -->
             <div class="header-right">
                 <div class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center">
                     <a href="https://www.facebook.com/StarbaseClub/" target="_blank"><span
@@ -149,12 +159,13 @@ include './config/constants.php';
         </div>
     </header>
 
-
+    <!-- Body of the website -->
     <section class="spad">
         <div class="container">
             <div class="about-us">
                 <h1>STARBASE PROGRAMS</h1>
             </div>
+            <!-- First Card -->
             <div class="wrap animate pop">
                 <div class="overlay">
                     <div class="overlay-content animate slide-left delay-2">
@@ -174,6 +185,8 @@ include './config/constants.php';
 
                 </div>
             </div>
+            <!-- First Card Ends -->
+            <!-- Second Card -->
             <div class="wrap animate pop">
                 <div class="overlay">
                     <div class="overlay-content animate slide-left delay-2">
@@ -193,10 +206,11 @@ include './config/constants.php';
 
                 </div>
             </div>
+            <!-- Second Card Ends -->
         </div>
     </section>
 
-
+    <!-- Footer Section -->
     <footer class="footer-section">
         <div class="upper">
             <h1>GET IN TOUCH TODAY</h1>
@@ -231,7 +245,9 @@ include './config/constants.php';
         </div>
 
     </footer>
+    <!-- Footer Section Ends -->
 
+    <!-- Including the JS Files -->
     <script src="./Starbase/Program/js/jquery-3.2.1.min.js"></script>
     <script src="./Starbase/Program/js/bootstrap.min.js"></script>
     <script src="./Starbase/Program/js/owl.carousel.min.js"></script>
