@@ -63,10 +63,7 @@ $(window).on('load', function() {
 		$('.owl-dots-number').css('marginTop', -av);
 	}
 	currentHSnumber();
-	
 
-
-	
 
 
 	/*------------------
