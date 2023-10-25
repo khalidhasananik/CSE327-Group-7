@@ -504,6 +504,42 @@ include 'frontend_cafe.php';
         </div>
     </section>
 
+    <section class="services-section spad">
+        <div class="container4">
+            <div class="about-us">
+                <h2>MAKE A RESERVATION AT</h2>
+                <h1>Starbase Cafe</h1>
+            </div>
+            <div class="main">
+                <input type="checkbox" id="chk" aria-hidden="true">
+                <div class="signup">
+                    <form action="frontend_cafe.php" method="post">
+                        <label for="chk" aria-hidden="true">Booking</label>
+                        <input type="text" name="name" placeholder="Name" required="">
+                        <input type="email" name="email" placeholder="Email" required="">
+                        <input type="text" name="phone" placeholder="Phone" required="">
+                        <input type="date" name="bdate" required />
+                        <input type="time" name="btime" required />
+                        <select type="text" name="service" required="">
+                            <option value="" disabled selected>Number of Seats</option>
+                            <option value="1">ONE</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            <option value="4">Four</option>
+                            <option value="5">Five</option>
+                            <option value="6">Six</option>
+                            <option value="7">Seven</option>
+                            <option value="8">Eight</option>
+                            <option value="9">Nine</option>
+                        </select>
+                        <textarea placeholder="Additional Notes" name="note"></textarea>
+                        <button type="submit" name="save">Reserve</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer-section">
         <div class="upper">
             <h1>GET IN TOUCH TODAY</h1>
