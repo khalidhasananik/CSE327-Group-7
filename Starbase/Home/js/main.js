@@ -1,33 +1,27 @@
+// Loaded: Always
 'use strict';
 
 $(window).on('load', function () {
-	/*------------------
-		Preloder
-	--------------------*/
 	$('.loader').fadeOut();
 	$('#preloder').delay(400).fadeOut('slow');
 });
 
+/**
+ * @param {string} name
+ * @return {string}	cookie value
+ */
+
 (function ($) {
-	/*------------------
-		Navigation
-	--------------------*/
 	$('.nav-switch').on('click', function (event) {
 		$('.main-menu').slideToggle(400);
 		event.preventDefault();
 	});
 
-	/*------------------
-		Background Set
-	--------------------*/
 	$('.set-bg').each(function () {
 		var bg = $(this).data('setbg');
 		$(this).css('background-image', 'url(' + bg + ')');
 	});
 
-	/*------------------
-		Hero Slider
-	--------------------*/
 	$('.hero-slider')
 		.owlCarousel({
 			loop: true,
@@ -55,6 +49,11 @@ $(window).on('load', function () {
 			$(this).append('<span>.</span>');
 		}
 	});
+
+	/**
+	 * Current HS number
+	 * @return {null}
+	 */
 	function currentHSnumber() {
 		$('.hero-slider .owl-dots').clone().appendTo('.hero-slider');
 		$('.hero-slider .owl-dots:last-child').addClass('owl-dots-number');
