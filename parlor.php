@@ -286,6 +286,40 @@ include 'frontend_parlor.php';
         </div>
     </section>
 
+    <footer class="footer-section">
+        <div class="upper">
+            <h1>GET IN TOUCH TODAY</h1>
+            <p>Get your membership with Bangladesh's biggest lifestyle lounge and enjoy exclusive perks,access to
+                premium amenities and unforgettable experiences.</p>
+        </div>
+        <div class="lower">
+            <div class="boxes">
+                <h2>
+                    LOCATION
+                </h2>
+                <p>
+                    Road-9, Avenue-2, Mirpur DOHS Cultural Center, Mirpur DOHS, Dhaka.
+                </p>
+            </div>
+            <div class="boxes">
+                <h2>
+                    EMAIL ADDRESS
+                </h2>
+                <p>
+                    starbase1@gmail.com
+                </p>
+            </div>
+            <div class="boxes">
+                <h2>
+                    CONTACT NUMBER
+                </h2>
+                <p>
+                    +880 17 7611 7766
+                </p>
+            </div>
+        </div>
+
+    </footer>
 
     <script src="./Starbase/Parlor/js/jquery-3.2.1.min.js"></script>
     <script src="./Starbase/Parlor/js/bootstrap.min.js"></script>
