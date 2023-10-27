@@ -120,10 +120,12 @@ include './config/constants.php';
                 <h2>STARBASE</h2>
             </div>
 
+            <!-- Nav Switch for when the site shrinks -->
             <div class="nav-switch">
                 <i class="fa fa-bars"></i>
             </div>
 
+            <!-- Navigation Bar Buttons -->
             <ul class="main-menu">
                 <li><a href="./index.php">HOME</a></li>
                 <li><a href="./programs.php">PROGRAMS</a></li>
@@ -148,6 +150,8 @@ include './config/constants.php';
                 </li>
                 <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
             </ul>
+            <!-- Navigation Bar Buttons Ends -->
+            <!-- Social Media Links -->
             <div class="header-right">
                 <div class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center">
                     <a href="https://www.facebook.com/StarbaseClub/" target="_blank"><span
