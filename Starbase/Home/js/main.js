@@ -1,6 +1,18 @@
 // Loaded: Always
 'use strict';
 
+/**
+ * Fade out the loader and preloader elements when the window has fully loaded.
+ *
+ * This function binds to the 'load' event of the window and fades out the
+ * elements with the specified classes after a delay.
+ *
+ * @jQuery - The jQuery object.
+ * @external "jQuery.fn"
+ * @function external:"jQuery.fn".fadeOut
+ * @returns {void}
+ */
+
 $(window).on('load', function () {
 	$('.loader').fadeOut();
 	$('#preloder').delay(400).fadeOut('slow');
@@ -8,17 +20,21 @@ $(window).on('load', function () {
 
 (function ($) {
 	/**
-	 * jQuery object
+	 * jQuery object.
 	 * @external jQuery
 	 * @see {@link http://api.jquery.com/jQuery/}
 	 */
 
 	/**
-	 * SOAP call that does ...
+	 * Toggle the visibility of the main menu when the navigation switch is clicked.
 	 *
-	 * @param {string} code Some desc ...
-	 * @param {callback} fnctVa Some desc ...
-	 * @param {external:jQuery} $attrib Input field that ...
+	 * This function binds to a 'click' event on an element with the class 'nav-switch' and
+	 * toggles the visibility of an element with the class 'main-menu' using a slide animation.
+	 * Additionally, it prevents the default behavior of the event to avoid page navigation.
+	 *
+	 * @function
+	 * @param {Event} event - The click event object.
+	 * @returns {void}
 	 */
 
 	$('.nav-switch').on('click', function (event) {
