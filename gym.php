@@ -1,12 +1,15 @@
+<!-- Connection Status -->
 <?php
 include './config/db_connection.php';
 include './config/constants.php';
 ?>
 
+<!-- HTML Begins -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Page Details -->
     <title>Gym - Starbase</title>
     <meta charset="UTF-8">
     <meta name="description" content="Restaurant">
