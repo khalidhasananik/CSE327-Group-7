@@ -21,6 +21,7 @@ include './config/constants.php';
         href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap"
         rel="stylesheet" />
 
+    <!-- Connecting CSS files -->
     <link rel="stylesheet" href="./Starbase/Gym/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./Starbase/Gym/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./Starbase/Gym/css/flaticon.css" />
@@ -107,10 +108,12 @@ include './config/constants.php';
 </head>
 
 <body>
+    <!-- Preloader for when the site boots up -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
+    <!-- Navigation Bar Begins -->
     <header class="header-section">
         <div class="header-warp">
             <div class="site-logo">
@@ -130,17 +133,17 @@ include './config/constants.php';
                 <li><a href="./parlor.php">PARLOR</a></li>
                 <li>
                     <?php if ($_SESSION['member_logged_in'] == true) { ?>
-                        <div class="dropdown">
-                            <a style="color: #fff;" class="active">
-                                <?php echo strtoupper($_SESSION['memberName']); ?>
-                            </a>
-                            <div class="dropdown-content">
-                                <a class="dropdown-item" href="<?= $baseURL ?>/dashboard.php">Dashboard</a>
-                                <a class="dropdown-item" href="<?= $baseURL ?>/frontend_logout.php">Logout</a>
-                            </div>
+                    <div class="dropdown">
+                        <a style="color: #fff;" class="active">
+                            <?php echo strtoupper($_SESSION['memberName']); ?>
+                        </a>
+                        <div class="dropdown-content">
+                            <a class="dropdown-item" href="<?= $baseURL ?>/dashboard.php">Dashboard</a>
+                            <a class="dropdown-item" href="<?= $baseURL ?>/frontend_logout.php">Logout</a>
                         </div>
+                    </div>
                     <?php } else { ?>
-                        <a href="./login.php">LOGIN</a>
+                    <a href="./login.php">LOGIN</a>
                     <?php } ?>
                 </li>
                 <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
@@ -157,6 +160,7 @@ include './config/constants.php';
             </div>
         </div>
     </header>
+    <!-- Navigation Bar Ends -->
 
     <section class="hero-section">
         <div class="hero-slider owl-carousel">
