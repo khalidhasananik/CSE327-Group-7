@@ -129,7 +129,10 @@ if ($_SESSION['member_logged_in'] != true) {
         <li><a href="./salon.php">SALON</a></li>
         <li><a href="./parlor.php">PARLOR</a></li>
         <li>
-          
+          <?php if ($_SESSION['member_logged_in'] == true) { ?>
+            <div class="dropdown">
+              <a class="active">
+                <?php echo strtoupper($_SESSION['memberName']); ?>
               </a>
               <div class="dropdown-content">
                 <a class="dropdown-item" href="<?= $baseURL ?>/dashboard.php">Dashboard</a>
@@ -138,7 +141,7 @@ if ($_SESSION['member_logged_in'] != true) {
             </div>
           <?php } else { ?>
             <a href="./login.php" class="active">LOGIN</a>
-         
+          <?php } ?>
         </li>
         <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
       </ul>
