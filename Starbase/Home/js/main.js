@@ -6,12 +6,21 @@ $(window).on('load', function () {
 	$('#preloder').delay(400).fadeOut('slow');
 });
 
-/**
- * @param {string} name
- * @return {string}	cookie value
- */
-
 (function ($) {
+	/**
+	 * jQuery object
+	 * @external jQuery
+	 * @see {@link http://api.jquery.com/jQuery/}
+	 */
+
+	/**
+	 * SOAP call that does ...
+	 *
+	 * @param {string} code Some desc ...
+	 * @param {callback} fnctVa Some desc ...
+	 * @param {external:jQuery} $attrib Input field that ...
+	 */
+
 	$('.nav-switch').on('click', function (event) {
 		$('.main-menu').slideToggle(400);
 		event.preventDefault();
