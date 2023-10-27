@@ -135,23 +135,23 @@ include './config/constants.php';
                 <li><a href="./parlor.php">PARLOR</a></li>
                 <li>
                     <?php if ($_SESSION['member_logged_in'] == true) { ?>
-                    <div class="dropdown">
-                        <a style="color: #fff;" class="active">
-                            <?php echo strtoupper($_SESSION['memberName']); ?>
-                        </a>
-                        <div class="dropdown-content">
-                            <a class="dropdown-item" href="<?= $baseURL ?>/dashboard.php">Dashboard</a>
-                            <a class="dropdown-item" href="<?= $baseURL ?>/frontend_logout.php">Logout</a>
+                        <div class="dropdown">
+                            <a style="color: #fff;" class="active">
+                                <?php echo strtoupper($_SESSION['memberName']); ?>
+                            </a>
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" href="<?= $baseURL ?>/dashboard.php">Dashboard</a>
+                                <a class="dropdown-item" href="<?= $baseURL ?>/frontend_logout.php">Logout</a>
+                            </div>
                         </div>
-                    </div>
                     <?php } else { ?>
-                    <a href="./login.php">LOGIN</a>
+                        <a href="./login.php">LOGIN</a>
                     <?php } ?>
                 </li>
                 <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
             </ul>
             <!-- Navigation Bar Buttons Ends -->
-            <!-- Social Media Links -->
+            <!-- Social Media Links/ Location -->
             <div class="header-right">
                 <div class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center">
                     <a href="https://www.facebook.com/StarbaseClub/" target="_blank"><span
