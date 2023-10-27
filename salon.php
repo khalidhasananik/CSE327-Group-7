@@ -1,32 +1,32 @@
 <?php
 include './config/db_connection.php';
 include './config/constants.php';
-include 'frontend_parlor.php';
+include 'frontend_query.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Parlor - Starbase</title>
+    <title>Salon - Starbase</title>
     <meta charset="UTF-8">
     <meta name="description" content="Restaurant">
     <meta name="keywords" content="restaurant, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="./Starbase/Parlor/img/logo.jpeg" rel="shortcut icon" />
+    <link href="./Starbase/Salon/img/logo.jpeg" rel="shortcut icon" />
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap"
         rel="stylesheet" />
 
-    <link rel="stylesheet" href="./Starbase/Parlor/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./Starbase/Parlor/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./Starbase/Parlor/css/flaticon.css" />
-    <link rel="stylesheet" href="./Starbase/Parlor/css/owl.carousel.css" />
-    <link rel="stylesheet" href="./Starbase/Parlor/css/style.css" />
-    <link rel="stylesheet" href="./Starbase/Parlor/css/animate.css" />
-    <link rel="stylesheet" href="./Starbase/Parlor/css/icomoon.css" />
-    <link rel="stylesheet" href="./Starbase/Parlor/css/ionicons.min.css" />
+    <link rel="stylesheet" href="./Starbase/Salon/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./Starbase/Salon/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./Starbase/Salon/css/flaticon.css" />
+    <link rel="stylesheet" href="./Starbase/Salon/css/owl.carousel.css" />
+    <link rel="stylesheet" href="./Starbase/Salon/css/style.css" />
+    <link rel="stylesheet" href="./Starbase/Salon/css/animate.css" />
+    <link rel="stylesheet" href="./Starbase/Salon/css/icomoon.css" />
+    <link rel="stylesheet" href="./Starbase/Salon/css/ionicons.min.css" />
     <link rel="stylesheet" href="./Starbase/common.css" />
 
     <script nonce="b3451030-54b2-447a-9bcf-c29babb905d2">
@@ -117,8 +117,8 @@ include 'frontend_parlor.php';
                 <li><a href="./programs.php">PROGRAMS</a></li>
                 <li><a href="./gym.php">GYM</a></li>
                 <li><a href="./cafe.php">CAFE</a></li>
-                <li><a href="./salon.php">SALON</a></li>
-                <li><a href="./parlor.php" class="active">PARLOR</a></li>
+                <li><a href="./salon.php" class="active">SALON</a></li>
+                <li><a href="./parlor.php">PARLOR</a></li>
                 <li>
                     <?php if ($_SESSION['member_logged_in'] == true) { ?>
                         <div class="dropdown">
@@ -152,26 +152,26 @@ include 'frontend_parlor.php';
 
     <section class="hero-section">
         <div class="hero-slider owl-carousel">
-            <div class="hs-item set-bg" data-setbg="./Starbase/Parlor/img/slider/1.jpeg">
+            <div class="hs-item set-bg" data-setbg="./Starbase/Salon/img/slider/1.jpeg">
                 <div class="hs-content">
                     <div class="hsc-warp">
-                        <h2>STARBASE PARLOR<span>.</span></h2>
+                        <h2>STARBASE SALON<span>.</span></h2>
 
                     </div>
                 </div>
             </div>
-            <div class="hs-item set-bg" data-setbg="./Starbase/Parlor/img/slider/2.jpeg">
+            <div class="hs-item set-bg" data-setbg="./Starbase/Salon/img/slider/2.jpeg">
                 <div class="hs-content">
                     <div class="hsc-warp">
-                        <h2>BE CONFIDENT, BE BEAUTIFUL<span>.</span></h2>
+                        <h2>BOLD<span>.</span> GROOMED<span>.</span> CONFIDENT<span>.</span></h2>
 
                     </div>
                 </div>
             </div>
-            <div class="hs-item set-bg" data-setbg="./Starbase/Parlor/img/slider/3.jpeg">
+            <div class="hs-item set-bg" data-setbg="./Starbase/Salon/img/slider/3.jpeg">
                 <div class="hs-content">
                     <div class="hsc-warp">
-                        <h2>LOVE YOURSELF, LOVE YOUR STYLE<span>.</span></h2>
+                        <h2>UNLEASH YOUR BEAUTY<span>.</span></h2>
                     </div>
                 </div>
             </div>
@@ -181,25 +181,29 @@ include 'frontend_parlor.php';
     <section class="services-section spad">
         <div class="container">
             <div class="section-title">
-                <img src="Starbase/Parlor/img/icons/parlor.png">
+                <img src="Starbase/Salon/img/icons/salon.png">
                 <h2>Our Services</h2>
             </div>
             <div class="row services">
                 <div class="col-lg-3 col-md-6 service-item">
-                    <img src="Starbase/Parlor/img/icons/hair.png">
+                    <!-- <i class="flaticon-005-coffee-1"></i> -->
+                    <img src="Starbase/Salon/img/icons/hair.png">
                     <h3>HAIR CUT</h3>
                 </div>
                 <div class="col-lg-3 col-md-6 service-item">
-                    <img src="Starbase/Parlor/img/icons/hairdryer.png">
+                    <!-- <i class="flaticon-016-pancake"></i> -->
+                    <img src="Starbase/Salon/img/icons/hairdryer.png">
                     <h3>HAIR COLOR</h3>
                 </div>
                 <div class="col-lg-3 col-md-6 service-item">
-                    <img src="Starbase/Parlor/img/icons/massage.png">
-                    <h3>SPA</h3>
+                    <!-- <i class="flaticon-008-soup"></i> -->
+                    <img src="Starbase/Salon/img/icons/sauna.png">
+                    <h3>FACIAL</h3>
                 </div>
                 <div class="col-lg-3 col-md-6 service-item">
-                    <img src="Starbase/Parlor/img/icons/nail-polish.png">
-                    <h3>MANI/PEDI</h3>
+                    <!-- <i class="flaticon-032-hamburger"></i> -->
+                    <img src="Starbase/Salon/img/icons/massage (1).png">
+                    <h3>MASSAGE</h3>
                 </div>
             </div>
         </div>
@@ -209,7 +213,7 @@ include 'frontend_parlor.php';
         <div class="container5">
             <div class="box">
                 <div class="imgBox">
-                    <img src="./Starbase/Parlor/img/hcut.jpeg">
+                    <img src="./Starbase/Salon/img/hair.jpeg">
                 </div>
                 <div class="content">
                     <h2>Hair Cut</br>
@@ -219,7 +223,7 @@ include 'frontend_parlor.php';
             </div>
             <div class="box">
                 <div class="imgBox">
-                    <img src="./Starbase/Parlor/img/hcolor.jpeg">
+                    <img src="./Starbase/Salon/img/hcolor.jpeg">
                 </div>
                 <div class="content">
                     <h2>Hair Color</br>
@@ -233,7 +237,7 @@ include 'frontend_parlor.php';
         <div class="container5">
             <div class="box">
                 <div class="imgBox">
-                    <img src="./Starbase/Parlor/img/facial.jpeg">
+                    <img src="./Starbase/Salon/img/facial.jpeg">
                 </div>
                 <div class="content">
                     <h2>Facials</br>
@@ -243,7 +247,7 @@ include 'frontend_parlor.php';
             </div>
             <div class="box">
                 <div class="imgBox">
-                    <img src="./Starbase/Parlor/img/massage.jpeg">
+                    <img src="./Starbase/Salon/img/massage.jpeg">
                 </div>
                 <div class="content">
                     <h2>Massage</br>
@@ -254,18 +258,17 @@ include 'frontend_parlor.php';
         </div>
     </div>
 
-
     <section class="services-section spad">
         <div class="container2">
             <div class="about-us">
                 <h2>BOOK AN APPOINTMENT AT</h2>
-                <h1>Starbase Parlor</h1>
+                <h1>Starbase Salon</h1>
             </div>
             <div class="main">
                 <input type="checkbox" id="chk" aria-hidden="true">
 
                 <div class="signup">
-                    <form action="frontend_parlor.php" method="post">
+                    <form action="frontend_query.php" method="post">
                         <label for="chk" aria-hidden="true">Booking</label>
                         <input type="text" name="name" placeholder="Name" required="">
                         <input type="email" name="email" placeholder="Email" required="">
@@ -321,11 +324,16 @@ include 'frontend_parlor.php';
 
     </footer>
 
-    <script src="./Starbase/Parlor/js/jquery-3.2.1.min.js"></script>
-    <script src="./Starbase/Parlor/js/bootstrap.min.js"></script>
-    <script src="./Starbase/Parlor/js/owl.carousel.min.js"></script>
-    <script src="./Starbase/Parlor/js/circle-progress.min.js"></script>
-    <script src="./Starbase/Parlor/js/main.js"></script>
+    <script src="./Starbase/Salon/js/jquery-3.2.1.min.js"></script>
+    <script src="./Starbase/Salon/js/bootstrap.min.js"></script>
+    <script src="./Starbase/Salon/js/owl.carousel.min.js"></script>
+    <script src="./Starbase/Salon/js/circle-progress.min.js"></script>
+    <script src="./Starbase/Salon/js/main.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0YyDTa0qqOjIerob2VTIwo_XVMhrruxo"></script>
+    <script src="./Starbase/Salon/js/map.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 

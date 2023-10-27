@@ -9,9 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="./Starbase/Login/img/logo.jpeg" rel="shortcut icon" />
-    <link
-        href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="./Starbase/Login/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./Starbase/Login/css/font-awesome.min.css" />
@@ -24,8 +22,8 @@
     <link rel="stylesheet" href="./Starbase/common.css" />
 
     <script nonce="b3451030-54b2-447a-9bcf-c29babb905d2">
-        (function (w, d) {
-            ! function (dk, dl, dm, dn) {
+        (function(w, d) {
+            ! function(dk, dl, dm, dn) {
                 dk[dm] = dk[dm] || {};
                 dk[dm].executed = [];
                 dk.zaraz = {
@@ -33,8 +31,8 @@
                     listeners: []
                 };
                 dk.zaraz.q = [];
-                dk.zaraz._f = function (dp) {
-                    return function () {
+                dk.zaraz._f = function(dp) {
+                    return function() {
                         var dq = Array.prototype.slice.call(arguments);
                         dk.zaraz.q.push({
                             m: dp,
@@ -60,9 +58,9 @@
                     dk[dm].o = (new Date).getTimezoneOffset();
                     if (dk.dataLayer)
                         for (const dy of Object.entries(Object.entries(dataLayer).reduce(((dz, dA) => ({
-                            ...dz[1],
-                            ...dA[1]
-                        }))))) zaraz.set(dy[0], dy[1], {
+                                ...dz[1],
+                                ...dA[1]
+                            }))))) zaraz.set(dy[0], dy[1], {
                             scope: "page"
                         });
                     dk[dm].q = [];
@@ -73,12 +71,12 @@
                     dt.defer = !0;
                     for (const dC of [localStorage, sessionStorage]) Object.keys(dC || {}).filter((dE => dE
                         .startsWith("_zaraz_"))).forEach((dD => {
-                            try {
-                                dk[dm]["z_" + dD.slice(7)] = JSON.parse(dC.getItem(dD))
-                            } catch {
-                                dk[dm]["z_" + dD.slice(7)] = dC.getItem(dD)
-                            }
-                        }));
+                        try {
+                            dk[dm]["z_" + dD.slice(7)] = JSON.parse(dC.getItem(dD))
+                        } catch {
+                            dk[dm]["z_" + dD.slice(7)] = dC.getItem(dD)
+                        }
+                    }));
                     dt.referrerPolicy = "origin";
                     dt.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(dk[dm])));
                     ds.parentNode.insertBefore(dt, ds)
@@ -95,6 +93,7 @@
     <div id="preloder">
         <div class="loader"></div>
     </div>
+
 
     <header class="header-section">
         <div class="header-warp">
@@ -132,12 +131,9 @@
             </ul>
             <div class="header-right">
                 <div class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center">
-                    <a href="https://www.facebook.com/StarbaseClub/" target="_blank"><span
-                            class="icon-facebook"></span></a>
-                    <a href="https://www.instagram.com/starbaseclub/" target="_blank"><span
-                            class="icon-instagram"></span></a>
-                    <a href="https://goo.gl/maps/bnKHbYoj7XL6Vkbf7?coh=178573&entry=tt" target="_blank"><span
-                            class="icon-map-marker"></span></a>
+                    <a href="https://www.facebook.com/StarbaseClub/" target="_blank"><span class="icon-facebook"></span></a>
+                    <a href="https://www.instagram.com/starbaseclub/" target="_blank"><span class="icon-instagram"></span></a>
+                    <a href="https://goo.gl/maps/bnKHbYoj7XL6Vkbf7?coh=178573&entry=tt" target="_blank"><span class="icon-map-marker"></span></a>
                 </div>
             </div>
         </div>
@@ -195,11 +191,7 @@
 
         gtag('config', 'UA-23581568-13');
     </script>
-    <script defer
-        src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816"
-        integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw=="
-        data-cf-beacon='{"rayId":"7c117abcafc291ab","version":"2023.4.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}'
-        crossorigin="anonymous"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7c117abcafc291ab","version":"2023.4.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}' crossorigin="anonymous"></script>
 </body>
 
 </html>
