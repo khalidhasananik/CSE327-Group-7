@@ -135,17 +135,17 @@ include './config/constants.php';
                 <li><a href="./parlor.php">PARLOR</a></li>
                 <li>
                     <?php if ($_SESSION['member_logged_in'] == true) { ?>
-                        <div class="dropdown">
-                            <a style="color: #fff;" class="active">
-                                <?php echo strtoupper($_SESSION['memberName']); ?>
-                            </a>
-                            <div class="dropdown-content">
-                                <a class="dropdown-item" href="<?= $baseURL ?>/dashboard.php">Dashboard</a>
-                                <a class="dropdown-item" href="<?= $baseURL ?>/frontend_logout.php">Logout</a>
-                            </div>
+                    <div class="dropdown">
+                        <a style="color: #fff;" class="active">
+                            <?php echo strtoupper($_SESSION['memberName']); ?>
+                        </a>
+                        <div class="dropdown-content">
+                            <a class="dropdown-item" href="<?= $baseURL ?>/dashboard.php">Dashboard</a>
+                            <a class="dropdown-item" href="<?= $baseURL ?>/frontend_logout.php">Logout</a>
                         </div>
+                    </div>
                     <?php } else { ?>
-                        <a href="./login.php">LOGIN</a>
+                    <a href="./login.php">LOGIN</a>
                     <?php } ?>
                 </li>
                 <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
@@ -166,6 +166,7 @@ include './config/constants.php';
     </header>
     <!-- Navigation Bar Ends -->
 
+    <!-- Hero Section/ Owl carousel -->
     <section class="hero-section">
         <div class="hero-slider owl-carousel">
             <div class="hs-item set-bg" data-setbg="./Starbase/Gym/img/slider/1.jpeg">
@@ -197,7 +198,9 @@ include './config/constants.php';
             </div>
         </div>
     </section>
+    <!-- Hero Section Ends -->
 
+    <!-- About Us Section -->
     <section class="services-section spad">
         <div class="container">
             <div class="row mt-5">
@@ -245,6 +248,7 @@ include './config/constants.php';
             </div>
         </div>
     </section>
+    <!-- About Us Section Ends -->
 
 
     <section class="services-section spad">
