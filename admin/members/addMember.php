@@ -1,9 +1,10 @@
 <?php
     // ini_set('display_errors', 1);
-    include '../../config/db_connection.php';
-    include '../../config/constants.php';
+    include '../../config/db_connection.php';// Include database connection file
+    include '../../config/constants.php'; // Include constants file
 
-    if ($_SESSION['admin_logged_in'] == true) {
+    // Check if the admin is logged in
+    if ($_SESSION['admin_logged_in'] == true) {// Include the query file if admin is logged in
         include 'query.php';
 ?>
 <!doctype html>
@@ -28,7 +29,7 @@
   </head>
   <body>
     <?php
-        include '../nav.php';
+        include '../nav.php';// Include the navigation file
     ?>
 
     <!-- Add member Form -->
@@ -91,6 +92,7 @@
 
 <?php
     } else {
+      // Redirect to the login page if the admin is not logged in
         header("location:$baseURL/admin/index.php?msg=login_first");
     }
 ?>
