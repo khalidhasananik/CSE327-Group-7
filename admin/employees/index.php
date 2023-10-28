@@ -1,10 +1,11 @@
 <?php
-    // ini_set('display_errors', 1);
-    include '../../config/db_connection.php';
-    include '../../config/constants.php';
+    // Include necessary PHP files
+    include '../../config/db_connection.php';// Include a database connection file.
+    include '../../config/constants.php';// Include a constants file.
 
+// Check if an admin is logged in
     if ($_SESSION['admin_logged_in'] == true) {
-        include 'query.php';
+        include 'query.php'; // Include a file called query.php if an admin is logged in.
 ?>
 <!doctype html>
 <html lang="en">
@@ -28,7 +29,7 @@
   </head>
   <body>
     <?php
-        include '../nav.php';
+        include '../nav.php';// Include a navigation file.
     ?>
 
     <div class="container">
@@ -93,6 +94,6 @@
 
 <?php
     } else {
-        header("location:$baseURL/admin/index.php?msg=login_first");
+        header("location:$baseURL/admin/index.php?msg=login_first");  // Redirect to the login page if not logged in.
     }
 ?>
