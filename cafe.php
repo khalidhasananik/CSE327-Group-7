@@ -597,7 +597,7 @@ include 'frontend_cafe.php';
 
     </footer>
 
-    <!-- External JS Scripts -->
+    <!-- External JS-Scripts -->
     <script src="./Starbase/Cafe/js/jquery-3.2.1.min.js"></script>
     <script src="./Starbase/Cafe/js/bootstrap.min.js"></script>
     <script src="./Starbase/Cafe/js/owl.carousel.min.js"></script>
