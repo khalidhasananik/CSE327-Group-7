@@ -1,9 +1,10 @@
 <?php
-    // ini_set('display_errors', 1);
-    include '../../config/db_connection.php';
-    include '../../config/constants.php';
+    // Initialize session and check if the admin is logged in
+    include '../../config/db_connection.php';// Include database connection configuration
+    include '../../config/constants.php';// Include constants like $baseURL
 
     if ($_SESSION['admin_logged_in'] == true) {
+      // Include the 'query.php' file for executing queries and interacting with the database
         include 'query.php';
 ?>
 <!doctype html>
@@ -28,6 +29,7 @@
   </head>
   <body>
     <?php
+    // Include a navigation bar defined in 'nav.php'
         include '../nav.php';
     ?>
 
@@ -82,6 +84,7 @@
 
 <?php
     } else {
+       // If the admin is not logged in, redirect to the login page
         header("location:$baseURL/admin/index.php?msg=login_first");
     }
 ?>
