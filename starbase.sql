@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 08, 2023 at 09:36 AM
+-- Generation Time: Oct 28, 2023 at 07:32 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -131,10 +131,11 @@ CREATE TABLE `members` (
 --
 
 INSERT INTO `members` (`mid`, `mname`, `email`, `phone`, `pid`, `discount`, `due`, `joindate`, `active`, `password`) VALUES
-(2, 'Salman', 'salman@gmail.com', '01852369656', 2, 15.00, 0.00, '2023-06-05 15:49:30', 1, '123456'),
+(2, 'Salman N', 'salman@gmail.com', '01852369656', 2, 15.00, 0.00, '2023-06-05 15:49:30', 1, '654321'),
 (3, 'new member', 'member@mail.com', '01715552232', 3, NULL, NULL, '2023-06-04 19:21:01', 1, '123456'),
 (5, 'member 2', 'member2@mail.com', '01715552242', 2, 10.00, NULL, '2023-06-05 15:41:32', NULL, '123456'),
-(6, 'new member 5', 'member5@mail.com', '01715552266', 5, NULL, NULL, '2023-06-04 23:16:57', 1, '12345');
+(6, 'new member 5', 'member5@mail.com', '01715552266', 5, NULL, NULL, '2023-06-04 23:16:57', 1, '12345'),
+(7, 'Khalid Hasan Anik', 'khalid.hasan1@northsouth.edu', '01640577943', 1, NULL, NULL, '2023-10-28 17:24:50', 1, '12345');
 
 -- --------------------------------------------------------
 
@@ -176,16 +177,33 @@ CREATE TABLE `reservation` (
   `Reservation_Date` date DEFAULT NULL,
   `Reservation_Time` time DEFAULT NULL,
   `Number_of_Seats` int(11) DEFAULT NULL,
-  `Additional_Notes` text DEFAULT NULL
+  `Additional_Notes` text DEFAULT NULL,
+  `Site` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `reservation`
+-- Table structure for table `reviews`
 --
 
-INSERT INTO `reservation` (`Name`, `Email`, `Phone`, `sid`, `Reservation_Date`, `Reservation_Time`, `Number_of_Seats`, `Additional_Notes`) VALUES
-('new member', 'member@mail.com', '01715552232', 16, '2023-06-08', '04:55:00', NULL, 'as Clean As Possible'),
-('new member 1', 'anik038opo@gmail.com', '01715552232', 22, '2023-06-15', '04:59:00', NULL, 'gg');
+CREATE TABLE `reviews` (
+  `id` int(11) NOT NULL,
+  `review` text DEFAULT NULL,
+  `c_name` varchar(255) DEFAULT NULL,
+  `r_for` varchar(255) DEFAULT 'Overall',
+  `created_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `review`, `c_name`, `r_for`, `created_at`) VALUES
+(1, 'This cozy restaurant has left the best impressions! Hospitable hosts, delicious dishes, beautiful presentation, wide wine list and wonderful dessert. I recommend to everyone! I would like to come back here again and again.', 'Kimi Nawa', 'Restaurant', '2023-10-28 15:54:23'),
+(2, 'I had an amazing experience at XYZ Hair Salon! The stylists were incredibly talented and listened to exactly what I wanted. My hair turned out beautiful and the salon had a relaxing atmosphere. Highly recommend!', 'new member', 'Overall', '2023-10-28 17:11:18'),
+(3, 'The team at UVW Hair Salon is exceptional. From the moment I walked in, they made me feel welcome and pampered. The attention to detail and their expertise in hair styling is unmatched. I always leave with a smile on my face.', 'new member', 'Overall', '2023-10-28 17:24:05'),
+(4, 'Some review ', 'Khalid Hasan Anik', 'Overall', '2023-10-28 17:25:13');
 
 -- --------------------------------------------------------
 
@@ -271,12 +289,12 @@ INSERT INTO `services` (`sid`, `s_site`, `s_name`, `s_price`, `availability`) VA
 (63, 'Parlor', 'DIAMOND FACIAL', 2000.00, 1),
 (64, 'Parlor', 'PEARL FACIAL', 2000.00, 1),
 (65, 'Parlor', 'FACE', 900.00, 1),
-(66, 'Parlor', 'HALF/FULLHAND', 900.00, 1),
-(67, 'Parlor', 'HALF/FULLLEG', 1400.00, 1),
+(66, 'Parlor', 'HALF/FULL HAND', 900.00, 1),
+(67, 'Parlor', 'HALF/FULL LEG', 1400.00, 1),
 (68, 'Parlor', 'FULL BODY', 7000.00, 1),
 (69, 'Parlor', 'FACE/FACE NECK', 900.00, 1),
-(70, 'Parlor', 'HALF/FULLHAND', 700.00, 1),
-(71, 'Parlor', 'HALF/FULLLEG', 700.00, 1),
+(70, 'Parlor', 'HALF/FULL HAND', 700.00, 1),
+(71, 'Parlor', 'HALF/FULL LEG', 700.00, 1),
 (72, 'Parlor', 'FULL BODY', 5700.00, 1),
 (73, 'Parlor', 'ACRYLIC EXTENSION', 3700.00, 1),
 (74, 'Parlor', 'ACRYLIC EXTENSION WITH GEL POLISH', 4100.00, 1),
@@ -292,14 +310,14 @@ INSERT INTO `services` (`sid`, `s_site`, `s_name`, `s_price`, `availability`) VA
 (84, 'Parlor', 'NAILS', 500.00, 1),
 (85, 'Parlor', 'DESIRED HAIRSTYLE', 800.00, 1),
 (86, 'Parlor', 'BASIC HAIR-DO', 1000.00, 1),
-(87, 'Parlor', 'SEMIBRIDAL', 2000.00, 1),
+(87, 'Parlor', 'SEMI BRIDAL', 2000.00, 1),
 (88, 'Parlor', 'FULL BRIDAL', 4000.00, 1),
 (89, 'Parlor', 'SINGLE STRING', 150.00, 1),
 (90, 'Parlor', 'HEAVY STRING', 300.00, 1),
 (91, 'Parlor', 'V CUT', 800.00, 1),
 (92, 'Parlor', 'U CUT', 800.00, 1),
 (93, 'Parlor', 'EQUAL', 800.00, 1),
-(94, 'Parlor', 'FRONTLAYER', 800.00, 1),
+(94, 'Parlor', 'FRONT LAYER', 800.00, 1),
 (95, 'Parlor', 'LAYER', 1500.00, 1),
 (96, 'Parlor', 'STEP', 1500.00, 1),
 (97, 'Parlor', 'VOLUME LAYER', 1600.00, 1),
@@ -312,7 +330,7 @@ INSERT INTO `services` (`sid`, `s_site`, `s_name`, `s_price`, `availability`) VA
 (104, 'Parlor', 'SHORT BOB', 1000.00, 1),
 (105, 'Parlor', 'ANGLE BOB', 1500.00, 1),
 (106, 'Parlor', 'GREY COVERAGE', 1500.00, 1),
-(107, 'Parlor', 'BASECOLOR/GLOBAL', 3000.00, 1),
+(107, 'Parlor', 'BASE COLOR/GLOBAL', 3000.00, 1),
 (108, 'Parlor', 'DIP DYE', 7800.00, 1),
 (109, 'Parlor', 'OMBRE', 7500.00, 1),
 (110, 'Parlor', 'BALAYAGE', 7500.00, 1),
@@ -321,15 +339,15 @@ INSERT INTO `services` (`sid`, `s_site`, `s_name`, `s_price`, `availability`) VA
 (113, 'Parlor', 'OLAPLEX/BOND FUSION', 3000.00, 1),
 (114, 'Parlor', 'HIGHLIGHTS PRSTICK', 500.00, 1),
 (115, 'Parlor', 'FASHION PE RSTICK', 1000.00, 1),
-(116, 'Parlor', 'BLOWDRYOUTCURLS', 1000.00, 1),
+(116, 'Parlor', 'BLOW DRYOUT CURLS', 1000.00, 1),
 (117, 'Parlor', 'HAIR SPIDER', 1000.00, 1),
 (118, 'Parlor', 'NORMAL BAN', 800.00, 1),
 (119, 'Parlor', 'MESSY BAN', 1500.00, 1),
 (120, 'Parlor', 'BRIDAL HAIRSTYLE', 2000.00, 1),
 (121, 'Parlor', 'ANY HAIRSTYLE', 2000.00, 1),
 (122, 'Parlor', 'ABSOLUTE REPAIR', 1300.00, 1),
-(123, 'Parlor', 'ANTIFRIZZ&MOISTURE', 3000.00, 1),
-(124, 'Parlor', 'HAIRFALLPROTEIN', 1800.00, 1),
+(123, 'Parlor', 'ANTI FRIZZ & MOISTURE', 3000.00, 1),
+(124, 'Parlor', 'HAIR FALL PROTEIN', 1800.00, 1),
 (125, 'Parlor', 'HAIR BOTOX', 1800.00, 1),
 (126, 'Parlor', 'DANDRUFF', 1500.00, 1),
 (127, 'Parlor', 'HAIR SPA', 1500.00, 1),
@@ -342,142 +360,88 @@ INSERT INTO `services` (`sid`, `s_site`, `s_name`, `s_price`, `availability`) VA
 (134, 'Parlor', 'KERATIN SMOOTHENING', 10000.00, 1),
 (135, 'Parlor', 'DEEP SHINE', 8000.00, 1),
 (136, 'Parlor', 'REBONDING', 12000.00, 1),
-(137, 'Parlor', 'STRAIGHTPUMP', 6000.00, 1),
-(138, 'Parlor', 'BENIPUMP', 4000.00, 1),
+(137, 'Parlor', 'STRAIGHT PUMP', 6000.00, 1),
+(138, 'Parlor', 'BENI PUMP', 4000.00, 1),
 (139, 'Parlor', 'FULL BODY MASSAGE(30MINS)', 2000.00, 1),
-(140, 'Parlor', 'FULL BODY MASSAGE (1HOUR)', 3500.00, 1),
+(140, 'Parlor', 'FULL BODY MASSAGE (1 HOUR)', 3500.00, 1),
 (141, 'Parlor', 'SHOULDER MASSAGE(30MINS)', 800.00, 1),
-(142, 'Parlor', 'BACK MASSAGE(30MINS)', 1000.00, 1),
-(143, 'Parlor', 'BELLY MASSAGE(30MINS)', 800.00, 1),
+(142, 'Parlor', 'BACK MASSAGE (30MINS)', 1000.00, 1),
+(143, 'Parlor', 'BELLY MASSAGE (30MINS)', 800.00, 1),
 (144, 'Parlor', 'FOOT MASSAGE(30MINS)', 1500.00, 1),
 (145, 'Parlor', 'HOT STONE MASSAGE(1HOUR)', 5000.00, 1),
 (146, 'Parlor', 'SCRUB(1HOUR)', 4000.00, 1),
-(147, 'Parlor', 'CALSSICMANI+PEDI', 700.00, 1),
-(148, 'Parlor', 'DELUXE MANI', 1000.00, 1),
-(149, 'Parlor', 'GLOWPACK', 1600.00, 1),
-(150, 'Parlor', 'DELUXE EDIT', 1000.00, 1),
-(151, 'Parlor', 'DELUXE PEDI+SPA', 1500.00, 1),
-(152, 'Parlor', 'EYEBROWPLUCK', 100.00, 1),
-(153, 'Parlor', 'UPPER LIP', 50.00, 1),
-(154, 'Parlor', 'FOREHEAD', 100.00, 1),
-(155, 'Parlor', 'CHIN', 80.00, 1),
-(156, 'Parlor', 'WAXING(UNDERARMS)', 200.00, 1),
-(157, 'Parlor', 'WAXING(ARMS)', 250.00, 1),
-(158, 'Parlor', 'WAXING(LEGS)', 500.00, 1),
-(159, 'Parlor', 'WAXING(FULL BODY)', 2000.00, 1),
-(160, 'Parlor', 'THREADING(EYEBROW)', 50.00, 1),
-(161, 'Parlor', 'THREADING(UPPERLIP)', 30.00, 1),
-(162, 'Parlor', 'THREADING(FOREHEAD)', 50.00, 1),
-(163, 'Parlor', 'THREADING(CHIN)', 30.00, 1),
-(164, 'Parlor', 'FACIAL(AYURVEDIC)', 500.00, 1),
-(165, 'Parlor', 'FACIAL(CLEANUP)', 400.00, 1),
-(166, 'Parlor', 'FACIAL(GOLD)', 800.00, 1),
-(167, 'Parlor', 'FACIAL(DIAMOND)', 800.00, 1),
-(168, 'Parlor', 'FACIAL(PEARL)', 800.00, 1),
-(169, 'Parlor', 'HAIRSPADRYWOMEN', 500.00, 1),
-(170, 'Parlor', 'HAIRSPA(MEN)', 400.00, 1),
-(171, 'Parlor', 'HAIRSPAKERATINWOMEN', 500.00, 1),
-(172, 'Parlor', 'HAIRSPAKERATIN(MEN)', 400.00, 1),
-(173, 'Parlor', 'HAIRSPASMOOTHINGWOMEN', 500.00, 1),
-(174, 'Parlor', 'HAIRSPASMOOTHING(MEN)', 400.00, 1),
-(175, 'Parlor', 'HAIRSPASTRAIGHTWOMEN', 500.00, 1),
-(176, 'Parlor', 'HAIRSPASTRAIGHT(MEN)', 400.00, 1),
-(177, 'Parlor', 'HAIRSPAREBONDINGWOMEN', 500.00, 1),
-(178, 'Parlor', 'HAIRSPAREBONDING(MEN)', 400.00, 1),
-(179, 'Parlor', 'HAIRSPASPAWOMEN', 500.00, 1),
-(180, 'Parlor', 'HAIRSPASPA(MEN)', 400.00, 1),
-(181, 'Parlor', 'MALESPA', 700.00, 1),
-(182, 'Parlor', 'BACKSCRUB', 300.00, 1),
-(183, 'Parlor', 'HEAD MASSAGE', 500.00, 1),
-(184, 'Parlor', 'FULL BODY MASSAGE(1 HOUR)', 1200.00, 1),
-(185, 'Parlor', 'FULL BODY MASSAGE(2 HOURS)', 2400.00, 1),
-(186, 'Parlor', 'BACK MASSAGE', 600.00, 1),
-(187, 'Parlor', 'BELLY MASSAGE', 400.00, 1),
-(188, 'Parlor', 'SHOULDER MASSAGE', 400.00, 1),
-(189, 'Parlor', 'HEAD MASSAGE', 400.00, 1),
-(190, 'Parlor', 'BODY POLISH', 1000.00, 1),
-(191, 'Parlor', 'BODY WRAP', 1500.00, 1),
-(192, 'Parlor', 'MANICURE', 300.00, 1),
-(193, 'Parlor', 'PEDICURE', 400.00, 1),
-(194, 'Parlor', 'FRENCH MANICURE', 400.00, 1),
-(195, 'Parlor', 'GEL POLISH', 500.00, 1),
-(196, 'Parlor', 'ACRYLIC NAIL EXTENSION', 700.00, 1),
-(197, 'Parlor', 'ACRYLIC REFILL', 500.00, 1),
-(198, 'Parlor', 'NAIL ART', 300.00, 1),
-(199, 'Parlor', 'NAIL REMOVAL', 200.00, 1),
-(200, 'Parlor', 'WAXING(UNDERARMS)', 100.00, 1),
-(201, 'Parlor', 'WAXING(ARMS)', 150.00, 1),
-(202, 'Parlor', 'WAXING(LEGS)', 300.00, 1),
-(203, 'Parlor', 'WAXING(FULL BODY)', 1500.00, 1),
-(204, 'Parlor', 'THREADING(EYEBROWS)', 30.00, 1),
-(205, 'Parlor', 'THREADING(UPPERLIP)', 20.00, 1),
-(206, 'Parlor', 'THREADING(FOREHEAD)', 30.00, 1),
-(207, 'Parlor', 'THREADING(CHIN)', 20.00, 1),
-(208, 'Parlor', 'FACIAL(AYURVEDIC)', 250.00, 1),
-(209, 'Parlor', 'FACIAL(CLEANUP)', 200.00, 1),
-(210, 'Parlor', 'FACIAL(GOLD)', 400.00, 1),
-(211, 'Parlor', 'FACIAL(DIAMOND)', 400.00, 1),
-(212, 'Parlor', 'FACIAL(PEARL)', 400.00, 1),
-(213, 'Parlor', 'HAIR SPA(WOMEN)', 200.00, 1),
-(214, 'Parlor', 'HAIR SPA(MEN)', 150.00, 1),
-(215, 'Parlor', 'KERATIN HAIR SPA(WOMEN)', 200.00, 1),
-(216, 'Parlor', 'KERATIN HAIR SPA(MEN)', 150.00, 1),
-(217, 'Parlor', 'SMOOTHING HAIR SPA(WOMEN)', 200.00, 1),
-(218, 'Parlor', 'SMOOTHING HAIR SPA(MEN)', 150.00, 1),
-(219, 'Parlor', 'STRAIGHTENING HAIR SPA(WOMEN)', 200.00, 1),
-(220, 'Parlor', 'STRAIGHTENING HAIR SPA(MEN)', 150.00, 1),
-(221, 'Parlor', 'REBONDING HAIR SPA(WOMEN)', 200.00, 1),
-(222, 'Parlor', 'REBONDING HAIR SPA(MEN)', 150.00, 1),
-(223, 'Parlor', 'SPA(WOMEN)', 200.00, 1),
-(224, 'Parlor', 'SPA(MEN)', 150.00, 1),
-(225, 'Parlor', 'MALE SPA', 250.00, 1),
-(226, 'Parlor', 'BACK SCRUB', 100.00, 1),
-(227, 'Parlor', 'HEAD MASSAGE', 200.00, 1),
-(228, 'Parlor', 'FULL BODY MASSAGE(1 HOUR)', 500.00, 1),
-(229, 'Parlor', 'FULL BODY MASSAGE(2 HOURS)', 1000.00, 1),
-(230, 'Parlor', 'BACK MASSAGE', 250.00, 1),
-(231, 'Parlor', 'BELLY MASSAGE', 200.00, 1),
-(232, 'Parlor', 'SHOULDER MASSAGE', 200.00, 1),
-(233, 'Parlor', 'HEAD MASSAGE', 200.00, 1),
-(234, 'Parlor', 'BODY POLISH', 500.00, 1),
-(235, 'Parlor', 'BODY WRAP', 750.00, 1),
-(236, 'Parlor', 'MANICURE', 150.00, 1),
-(237, 'Parlor', 'PEDICURE', 200.00, 1),
-(238, 'Parlor', 'FRENCH MANICURE', 200.00, 1),
-(239, 'Parlor', 'GEL POLISH', 250.00, 1),
-(240, 'Parlor', 'ACRYLIC NAIL EXTENSION', 300.00, 1),
-(241, 'Parlor', 'ACRYLIC REFILL', 250.00, 1),
-(242, 'Parlor', 'NAIL ART', 150.00, 1),
-(243, 'Parlor', 'NAIL REMOVAL', 100.00, 1),
-(244, 'Parlor', 'MAKEUP', 500.00, 1),
-(245, 'Parlor', 'BRIDAL MAKEUP', 2500.00, 1),
-(246, 'Parlor', 'PARTY MAKEUP', 1000.00, 1),
-(247, 'Parlor', 'EVENING MAKEUP', 800.00, 1),
-(248, 'Parlor', 'DAY MAKEUP', 700.00, 1),
-(249, 'Parlor', 'EYE MAKEUP', 400.00, 1),
-(250, 'Parlor', 'HAIR STRAIGHTENING', 2000.00, 1),
-(251, 'Parlor', 'HAIR CURLING', 2000.00, 1),
-(252, 'Parlor', 'HAIR PERMING', 2500.00, 1),
-(253, 'Parlor', 'HAIR COLORING', 1500.00, 1),
-(254, 'Parlor', 'HAIR HIGHLIGHTS', 2000.00, 1),
-(255, 'Parlor', 'HAIR LOWLIGHTS', 2000.00, 1),
-(256, 'Parlor', 'HAIR REBONDING', 3000.00, 1),
-(257, 'Parlor', 'HAIR SMOOTHENING', 2500.00, 1),
-(258, 'Parlor', 'KERATIN TREATMENT', 3000.00, 1),
-(259, 'Parlor', 'DANDRUFF TREATMENT', 1500.00, 1),
-(260, 'Parlor', 'HAIR FALL TREATMENT', 2000.00, 1),
-(261, 'Parlor', 'SCALP TREATMENT', 1500.00, 1),
-(262, 'Parlor', 'HAIR SPA(WOMEN)', 300.00, 1),
-(263, 'Parlor', 'HAIR SPA(MEN)', 250.00, 1),
-(264, 'Parlor', 'KERATIN HAIR SPA(WOMEN)', 300.00, 1),
-(265, 'Parlor', 'KERATIN HAIR SPA(MEN)', 250.00, 1),
-(266, 'Parlor', 'SMOOTHING HAIR SPA(WOMEN)', 300.00, 1),
-(267, 'Parlor', 'SMOOTHING HAIR SPA(MEN)', 250.00, 1),
-(268, 'Parlor', 'STRAIGHTENING HAIR SPA(WOMEN)', 300.00, 1),
-(269, 'Parlor', 'STRAIGHTENING HAIR SPA(MEN)', 250.00, 1),
-(270, 'Parlor', 'REBONDING HAIR SPA(WOMEN)', 300.00, 1),
-(271, 'Parlor', 'REBONDING HAIR SPA(MEN)', 250.00, 1),
-(272, 'Parlor', 'SPA(WOMEN)', 300.00, 1);
+(147, 'Parlor', 'CALSSIC MANI+PEDI', 700.00, 1),
+(148, 'Parlor', 'FRENCH MANICURE', 1200.00, 1),
+(149, 'Parlor', 'GEL MANICURE', 1800.00, 1),
+(150, 'Parlor', 'GEL EXTENSION WITH FRENCH', 3000.00, 1),
+(151, 'Parlor', 'REFILL', 1200.00, 1),
+(152, 'Parlor', 'REMOVAL', 500.00, 1),
+(153, 'Parlor', 'FRENCH PEDI', 800.00, 1),
+(154, 'Parlor', 'NAIL ART PER NAIL', 100.00, 1),
+(155, 'Parlor', 'NAIL ART PER HAND', 500.00, 1),
+(156, 'Parlor', 'NAIL EXTENSION PER HAND', 1500.00, 1),
+(157, 'Parlor', 'BODY POLISH (1HOUR)', 4000.00, 1),
+(158, 'Parlor', 'BODY POLISH (1.5HOUR)', 5500.00, 1),
+(159, 'Parlor', 'BODY POLISH (2HOUR)', 7000.00, 1),
+(160, 'Parlor', 'FULL BODY SCRUB (1HOUR)', 3500.00, 1),
+(161, 'Parlor', 'FULL BODY SCRUB (1.5HOUR)', 5000.00, 1),
+(162, 'Parlor', 'FULL BODY SCRUB (2HOUR)', 6500.00, 1),
+(163, 'Parlor', 'AROMATHERAPY MASSAGE (1HOUR)', 4000.00, 1),
+(164, 'Parlor', 'AROMATHERAPY MASSAGE (1.5HOUR)', 5500.00, 1),
+(165, 'Parlor', 'AROMATHERAPY MASSAGE (2HOUR)', 7000.00, 1),
+(166, 'Parlor', 'DEEP TISSUE MASSAGE (1HOUR)', 4500.00, 1),
+(167, 'Parlor', 'DEEP TISSUE MASSAGE (1.5HOUR)', 6000.00, 1),
+(168, 'Parlor', 'DEEP TISSUE MASSAGE (2HOUR)', 7500.00, 1),
+(169, 'Parlor', 'SWEDISH MASSAGE (1HOUR)', 3500.00, 1),
+(170, 'Parlor', 'SWEDISH MASSAGE (1.5HOUR)', 5000.00, 1),
+(171, 'Parlor', 'SWEDISH MASSAGE (2HOUR)', 6500.00, 1),
+(172, 'Parlor', 'HEAD MASSAGE (30MINS)', 800.00, 1),
+(173, 'Parlor', 'BACK MASSAGE (30MINS)', 1000.00, 1),
+(174, 'Parlor', 'FOOT MASSAGE (30MINS)', 1500.00, 1),
+(175, 'Parlor', 'BELLY MASSAGE (30MINS)', 800.00, 1),
+(176, 'Parlor', 'SHOULDER MASSAGE (30MINS)', 800.00, 1),
+(177, 'Parlor', 'HAIR SPA (1HOUR)', 3000.00, 1),
+(178, 'Parlor', 'HAIR SPA (1.5HOUR)', 4500.00, 1),
+(179, 'Parlor', 'HAIR SPA (2HOUR)', 6000.00, 1),
+(180, 'Parlor', 'HAIR CUT', 800.00, 1),
+(181, 'Parlor', 'HAIR CUT & STYLING', 1000.00, 1),
+(182, 'Parlor', 'HEAD MASSAGE', 800.00, 1),
+(183, 'Parlor', 'HAIR WASH', 150.00, 1),
+(184, 'Parlor', 'HAIR STRAIGHTENING', 3000.00, 1),
+(185, 'Parlor', 'HAIR PERMING', 3000.00, 1),
+(186, 'Parlor', 'HAIR COLORING', 3000.00, 1),
+(187, 'Parlor', 'HAIR HIGHLIGHTS', 3000.00, 1),
+(188, 'Parlor', 'KERATIN TREATMENT', 4000.00, 1),
+(189, 'Parlor', 'BRIDAL MAKEUP', 5000.00, 1),
+(190, 'Parlor', 'PARTY MAKEUP', 3000.00, 1),
+(191, 'Parlor', 'ENGAGEMENT MAKEUP', 4000.00, 1),
+(192, 'Parlor', 'RECEPTION MAKEUP', 4000.00, 1),
+(193, 'Parlor', 'HD MAKEUP', 4000.00, 1),
+(194, 'Parlor', 'AIRBRUSH MAKEUP', 5000.00, 1),
+(195, 'Parlor', 'NATURAL MAKEUP', 2000.00, 1),
+(196, 'Parlor', 'EYE MAKEUP', 800.00, 1),
+(197, 'Parlor', 'FALSE LASHES', 300.00, 1),
+(198, 'Parlor', 'FALSE LASHES (WITH MAKEUP)', 200.00, 1),
+(199, 'Parlor', 'THREADING (EYEBROWS)', 50.00, 1),
+(200, 'Parlor', 'THREADING (UPPER LIP)', 30.00, 1),
+(201, 'Parlor', 'THREADING (FOREHEAD)', 30.00, 1),
+(202, 'Parlor', 'THREADING (CHIN)', 30.00, 1),
+(203, 'Parlor', 'WAXING (FULL ARMS)', 300.00, 1),
+(204, 'Parlor', 'WAXING (HALF ARMS)', 200.00, 1),
+(205, 'Parlor', 'WAXING (UNDER ARMS)', 150.00, 1),
+(206, 'Parlor', 'WAXING (FULL LEGS)', 400.00, 1),
+(207, 'Parlor', 'WAXING (HALF LEGS)', 250.00, 1),
+(208, 'Parlor', 'WAXING (BIKINI LINE)', 200.00, 1),
+(209, 'Parlor', 'WAXING (FULL BODY)', 1200.00, 1),
+(210, 'Parlor', 'CLEANUP', 300.00, 1),
+(211, 'Parlor', 'FACIAL (CLEANUP + MASSAGE)', 800.00, 1),
+(212, 'Parlor', 'FACIAL (BLEACH)', 400.00, 1),
+(213, 'Parlor', 'FACIAL (TAN REMOVAL)', 600.00, 1),
+(214, 'Parlor', 'FACIAL (ACNE TREATMENT)', 1000.00, 1),
+(215, 'Parlor', 'FACIAL (ANTI-AGING)', 1200.00, 1),
+(216, 'Parlor', 'FACIAL (PIGMENTATION)', 800.00, 1),
+(217, 'Parlor', 'FACIAL (SKIN LIGHTENING)', 1000.00, 1),
+(218, 'Parlor', 'FACIAL (DEEP CLEANSING)', 600.00, 1);
 
 --
 -- Indexes for dumped tables
@@ -529,6 +493,12 @@ ALTER TABLE `reservation`
   ADD KEY `sid` (`sid`);
 
 --
+-- Indexes for table `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `services`
 --
 ALTER TABLE `services`
@@ -560,7 +530,7 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `mid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `mid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `plans`
@@ -569,26 +539,10 @@ ALTER TABLE `plans`
   MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT for table `reviews`
 --
-
---
--- Constraints for table `department`
---
-ALTER TABLE `department`
-  ADD CONSTRAINT `department_ibfk_1` FOREIGN KEY (`mgrid`) REFERENCES `employee` (`id`);
-
---
--- Constraints for table `employee`
---
-ALTER TABLE `employee`
-  ADD CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`dno`) REFERENCES `department` (`dno`);
-
---
--- Constraints for table `members`
---
-ALTER TABLE `members`
-  ADD CONSTRAINT `members_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `plans` (`pid`);
+ALTER TABLE `reviews`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
