@@ -14,11 +14,13 @@ include 'frontend_cafe.php';
     <meta name="keywords" content="restaurant, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Favicon -->
     <link href="./Starbase/Cafe/img/logo.jpeg" rel="shortcut icon" />
+
+    <!-- External CSS Styles -->
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap"
         rel="stylesheet" />
-
     <link rel="stylesheet" href="./Starbase/Cafe/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./Starbase/Cafe/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./Starbase/Cafe/css/flaticon.css" />
@@ -97,11 +99,12 @@ include 'frontend_cafe.php';
 </head>
 
 <body>
-
+    <!-- Preloader -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
+    <!-- Header Section -->
     <header class="header-section">
         <div class="header-warp">
             <div class="site-logo">
@@ -112,6 +115,7 @@ include 'frontend_cafe.php';
                 <i class="fa fa-bars"></i>
             </div>
 
+            <!-- Main Menu -->
             <ul class="main-menu">
                 <li><a href="./index.php">HOME</a></li>
                 <li><a href="./programs.php">PROGRAMS</a></li>
@@ -120,6 +124,7 @@ include 'frontend_cafe.php';
                 <li><a href="./salon.php">SALON</a></li>
                 <li><a href="./parlor.php">PARLOR</a></li>
                 <li>
+                    <!-- Conditional Dropdown Menu for Logged-in Members -->
                     <?php if ($_SESSION['member_logged_in'] == true) { ?>
                     <div class="dropdown">
                         <a style="color: #fff;" class="active">
@@ -131,19 +136,27 @@ include 'frontend_cafe.php';
                         </div>
                     </div>
                     <?php } else { ?>
+                    <!-- Login Option for Online Users -->
                     <a href="./login.php">LOGIN</a>
                     <?php } ?>
                 </li>
                 <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
             </ul>
+
+            <!-- Social Media Icons for Contact -->
             <div class="header-right">
                 <div class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center">
                     <a href="https://www.facebook.com/StarbaseClub/" target="_blank"><span
                             class="icon-facebook"></span></a>
                     <a href="https://www.instagram.com/starbaseclub/" target="_blank"><span
                             class="icon-instagram"></span></a>
-                    <a href="https://goo.gl/maps/bnKHbYoj7XL6Vkbf7?coh=178573&entry=tt" target="_blank"><span
-                            class="icon-map-marker"></span></a>
+                    <a href="https://twitter.com/StarbaseClub" target="_blank"><span class="icon-twitter"></span></a>
+                </div>
+                <!-- Starbase Location -->
+                <div class="topp pr-4">
+                    <p class="mb-0">
+                        <span class="icon-map"></span> Location
+                    </p>
                 </div>
             </div>
         </div>
