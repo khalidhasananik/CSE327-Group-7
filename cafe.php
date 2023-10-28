@@ -14,13 +14,14 @@ include 'frontend_cafe.php';
     <meta name="keywords" content="restaurant, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
     <link href="./Starbase/Cafe/img/logo.jpeg" rel="shortcut icon" />
-
+    
+    
     <!-- External CSS Styles -->
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap"
         rel="stylesheet" />
+
     <link rel="stylesheet" href="./Starbase/Cafe/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./Starbase/Cafe/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./Starbase/Cafe/css/flaticon.css" />
@@ -31,7 +32,6 @@ include 'frontend_cafe.php';
     <link rel="stylesheet" href="./Starbase/Cafe/css/ionicons.min.css" />
     <link rel="stylesheet" href="./Starbase/common.css" />
 
-    <!-- Zaraz Tracking Script -->
     <script nonce="b3451030-54b2-447a-9bcf-c29babb905d2">
     (function(w, d) {
         ! function(dk, dl, dm, dn) {
@@ -125,7 +125,7 @@ include 'frontend_cafe.php';
                 <li><a href="./salon.php">SALON</a></li>
                 <li><a href="./parlor.php">PARLOR</a></li>
                 <li>
-                    <!-- Conditional Dropdown Menu for Member -->
+                    <!-- Conditional Dropdown Menu for Logged-In Member -->
                     <?php if ($_SESSION['member_logged_in'] == true) { ?>
                     <div class="dropdown">
                         <a style="color: #fff;" class="active">
@@ -137,160 +137,486 @@ include 'frontend_cafe.php';
                         </div>
                     </div>
                     <?php } else { ?>
-                    <!-- Login Option for Non-Members -->
-                    <a href="./login.php">LOGIN</a>
+                        <!-- Login Option for Online Non Logged-In Members -->
+                        <a href="./login.php">LOGIN</a>
                     <?php } ?>
                 </li>
                 <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
             </ul>
 
-            <!-- Social Media Icons -->
+            <!-- Social Media Clickable Icons -->
             <div class="header-right">
                 <div class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center">
                     <a href="https://www.facebook.com/StarbaseClub/" target="_blank"><span
                             class="icon-facebook"></span></a>
                     <a href="https://www.instagram.com/starbaseclub/" target="_blank"><span
                             class="icon-instagram"></span></a>
-                    <a href="https://twitter.com/StarbaseClub" target="_blank"><span class="icon-twitter"></span></a>
-                </div>
-                <!-- Contact Information -->
-                <div class="topp pr-4">
-                    <p class="mb-0">
-                        <span class="icon-map"></span> Location
-                    </p>
+                    <a href="https://goo.gl/maps/bnKHbYoj7XL6Vkbf7?coh=178573&entry=tt" target="_blank"><span
+                            class="icon-map-marker"></span></a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+
     <section class="hero-section">
         <!-- Owl Carousel -->
         <div class="hero-slider owl-carousel">
-            <div class="hs-item set-bg" data-setbg="img/hero/1.jpg"></div>
-            <div class="hs-item set-bg" data-setbg="img/hero/2.jpg"></div>
-            <div class="hs-item set-bg" data-setbg="img/hero/3.jpg"></div>
+            <div class="hs-item set-bg" data-setbg="./Starbase/Cafe/img/slider/slider-1.jpg">
+                <div class="hs-content">
+                    <div class="hsc-warp">
+                        <h2>STARBASE CAFE<span>.</span></h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="hs-item set-bg" data-setbg="./Starbase/Cafe/img/slider/slider-2.jpg">
+                <div class="hs-content">
+                    <div class="hsc-warp">
+                        <h2>SPECIAL DISHES<span>.</span></h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="hs-item set-bg" data-setbg="./Starbase/Cafe/img/slider/slider-3.jpg">
+                <div class="hs-content">
+                    <div class="hsc-warp">
+                        <h2>DELICIOUS FOOD<span>.</span></h2>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Our Services -->
-    <div class="section-title">
-        <span>Our Services</span>
-        <h2>DISCOVER OUR MENU</h2>
-    </div>
 
-    <!-- Our Menu -->
-    <div class="menu-section spad">
+    <!-- Our Services -->
+    <section class="services-section spad">
         <div class="container">
-            <div class="row">
-                <!-- Categories -->
-                <div class="col-lg-12 col-md-12">
-                    <ul class="menu-tab">
-                        <li class="active" data-type="*">All</li>
-                        <li data-type=".appetizers">Appetizers</li>
-                        <li data-type=".starters">Starters</li>
-                        <li data-type=".main-course">Main Course</li>
-                        <li data-type=".desserts">Desserts</li>
-                    </ul>
-                </div>
+            <div class="section-title">
+                <i class="flaticon-022-tray"></i>
+                <h2>Our Services</h2>
             </div>
 
-            <div class="row menu-filter">
-                <div class="col-lg-12 col-md-12">
+            <div class="row services">
+                <div class="col-lg-3 col-md-6 service-item">
+                    <i class="flaticon-005-coffee-1"></i>
+                    <h3>Breakfast</h3>
+                </div>
+                <div class="col-lg-3 col-md-6 service-item">
+                    <i class="flaticon-016-pancake"></i>
+                    <h3>Brunch</h3>
+                </div>
+                <div class="col-lg-3 col-md-6 service-item">
+                    <i class="flaticon-008-soup"></i>
+                    <h3>Lunch</h3>
+                </div>
+                <div class="col-lg-3 col-md-6 service-item">
+                    <i class="flaticon-032-hamburger"></i>
+                    <h3>Dinner</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="menu-section spad set-bg" data-setbg="./Starbase/Cafe/img/menu-bg.jpg">
+        <div class="container">
+            <!-- Our Menu -->
+            <div class="section-title text-white">
+                <i class="flaticon-022-tray"></i>
+                <h2>Our Menu</h2>
+            </div>
+            
+            <!-- Categories -->
+            <ul class="menu-tab-nav nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1"
+                        aria-selected="true">Appetizers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2"
+                        aria-selected="false">Starters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3"
+                        aria-selected="false">Main Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4"
+                        aria-selected="false">Desserts</a>
+                </li>
+            </ul>
+            <div class="tab-content menu-tab-content">
+
+                <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
                     <div class="row">
-                        <!-- Menu Items -->
-                        <div class="mix col-lg-6 col-md-6 appetizers">
+
+                        <!-- Menu Items with Brief Description -->
+                        <div class="col-lg-6">
+
                             <div class="menu-item">
-                                <img src="img/menu/1.jpg" alt="">
-                                <div class="mi-title">
-                                    <h5>Spinach</h5>
-                                    <h6>$24.90</h6>
+                                <h5>Spicy Grilled Mushroom</h5>
+                                <div class="mi-meta">
+                                    <p>Tossed with Chopped Garlic, Red Chilli, Black Pepper and Chilli flakes</p>
+                                    <div class="menu-price">&#2547;260</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Smokey BBQ Wings</h5>
+                                <div class="mi-meta">
+                                    <p>These BBQ wings are juicy with a spicy outside that's smothered in thick barbecue
+                                        sauce and served topped with sesame seed</p>
+                                    <div class="menu-price">&#2547;360</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Fried Calamari</h5>
+                                <div class="mi-meta">
+                                    <p>Squid rings, dipping it in a mixture of Flour, Semolina and Eggs, deep fried and
+                                        served with sweet and sour sauce</p>
+                                    <div class="menu-price">&#2547;370</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Shrimp Tempura</h5>
+                                <div class="mi-meta">
+                                    <p>Fresh shrimp dipped into tempura batter and deep-fried in hot oil.</p>
+                                    <div class="menu-price">&#2547;390</div>
                                 </div>
                             </div>
                         </div>
-                        <!-- ... (more menu items) ... -->
+                        <div class="col-lg-6">
+
+                            <div class="menu-item">
+                                <h5>Classic Caesar Salad</h5>
+                                <div class="mi-meta">
+                                    <p>Contains lettuce, cherry tomato cheese, and
+                                        small pieces of fried bread, served with a dressing of oil, vinegar and herbs
+                                    </p>
+                                    <div class="menu-price">&#2547;360</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Tuna Fish Salad</h5>
+                                <div class="mi-meta">
+                                    <p>Crisp vegetables tossed with beans and tuna cucumber, carrot capsicum and a
+                                        citrusy dressing</p>
+                                    <div class="menu-price">&#2547;390</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Avocado With Shrimp Salad</h5>
+                                <div class="mi-meta">
+                                    <p>Loaded with avocado, apple, mango, 2 types of capsicum, cherry tomatoes, red
+                                        cabbage a bit of honey and lemon with shrimp</p>
+                                    <div class="menu-price">&#2547;440</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Apple Chicken Cashew Nut Salad</h5>
+                                <div class="mi-meta">
+                                    <p>Julian chicken, cashew nut, cucumber, 3 types of capsicum, apple, tomato, lemon
+                                        juice and our special dressing</p>
+                                    <div class="menu-price">&#2547;490</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Make a Reservation -->
-    <div class="reservation-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="rs-info">
-                        <div class="section-title">
-                            <span>Make a Reservation</span>
-                            <h2>BOOK A TABLE</h2>
+                <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                    <div class="row">
+                        <div class="col-lg-6">
+
+                            <div class="menu-item">
+                                <h5>Peri Peri Chicken</h5>
+                                <div class="mi-meta">
+                                    <p>Chicken in an a well flavoured Peri Peri marinade.</p>
+                                    <div class="menu-price">&#2547;450</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Stuffed Chicken</h5>
+                                <div class="mi-meta">
+                                    <p>This stuffed chicken breast recipe features the creamiest and most
+                                        delicious cheese and spinach filling</p>
+                                    <div class="menu-price">&#2547;570</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Eggs Benedict</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;390</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Soft-Boiled Organic Egg</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;220</div>
+                                </div>
+                            </div>
                         </div>
-                        <p>Starbase Cafe is the perfect place to enjoy your favorite dishes. Reserve a table online
-                            and save your spot!</p>
-                        <div class="rs-form set-bg" data-setbg="img/reservation-bg.jpg">
-                            <div class="rs-inner">
-                                <form action="#">
-                                    <div class="rs-date">
-                                        <input type="text" placeholder="Date" class="datepicker">
-                                        <i class="icon_calendar"></i>
-                                    </div>
-                                    <div class="rs-number">
-                                        <input type="text" placeholder="Number of seats">
-                                        <i class="icon_profile"></i>
-                                    </div>
-                                    <div class="rs-submit">
-                                        <button class="site-btn">BOOK NOW</button>
-                                    </div>
-                                </form>
+                        <div class="col-lg-6">
+
+                            <div class="menu-item">
+                                <h5>Scrambled Eggs with ham</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;250</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Scrambled Eggs in Puff Pastry</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;360</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Eggs Benedict</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;500</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+                    <div class="row">
+                        <div class="col-lg-6">
+
+                            <div class="menu-item">
+                                <h5>Scrambled Eggs with ham</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;190</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Scrambled Eggs in Puff Pastry</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;200</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Eggs Benedict</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;220</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+
+                            <div class="menu-item">
+                                <h5>Scrambled Eggs with ham</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;540</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Scrambled Eggs in Puff Pastry</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;690</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Eggs Benedict</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;250</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Soft-Boiled Organic Egg</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;500</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4">
+                    <div class="row">
+                        <div class="col-lg-6">
+
+                            <div class="menu-item">
+                                <h5>Scrambled Eggs with ham</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;460</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Scrambled Eggs in Puff Pastry</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;540</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Eggs Benedict</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;320</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+
+                            <div class="menu-item">
+                                <h5>Scrambled Eggs with ham</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;390</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Scrambled Eggs in Puff Pastry</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;520</div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <h5>Eggs Benedict</h5>
+                                <div class="mi-meta">
+                                    <p>with wild mushrooms and asparagus</p>
+                                    <div class="menu-price">&#2547;190</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Footer Section -->
-    <footer class="footer-section">
-        <div class="container">
-            <div class="footer-logo">
-                <a href="./index.php">
-                    <h2>STARBASE</h2>
-                </a>
+
+    <!-- Make a Reservation -->
+    <section class="services-section spad">
+        <div class="container4">
+            <div class="about-us">
+                <h2>MAKE A RESERVATION AT</h2>
+                <h1>Starbase Cafe</h1>
             </div>
-            <div class="row">
-                <!-- Contact Information -->
-                <div class="col-lg-6">
-                    <div class="contact-info">
-                        <div class="ci-title">
-                            <h5>Contact Information</h5>
-                        </div>
-                        <p>Location: [Your Cafe's Address]</p>
-                        <p>Phone: [Your Contact Number]</p>
-                        <p>Email: [Your Email Address]</p>
-                    </div>
-                </div>
-                <!-- Social Media Links -->
-                <div class="col-lg-6">
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/StarbaseClub/" target="_blank">Facebook</a>
-                        <a href="https://www.instagram.com/starbaseclub/" target="_blank">Instagram</a>
-                        <a href="https://twitter.com/StarbaseClub" target="_blank">Twitter</a>
-                    </div>
+            <div class="main">
+                <input type="checkbox" id="chk" aria-hidden="true">
+                <div class="signup">
+                    <form action="frontend_cafe.php" method="post">
+                        <label for="chk" aria-hidden="true">Booking</label>
+                        <input type="text" name="name" placeholder="Name" required="">
+                        <input type="email" name="email" placeholder="Email" required="">
+                        <input type="text" name="phone" placeholder="Phone" required="">
+                        <input type="date" name="bdate" required />
+                        <input type="time" name="btime" required />
+                        <select type="text" name="service" required="">
+                            <option value="" disabled selected>Number of Seats</option>
+                            <option value="1">ONE</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            <option value="4">Four</option>
+                            <option value="5">Five</option>
+                            <option value="6">Six</option>
+                            <option value="7">Seven</option>
+                            <option value="8">Eight</option>
+                            <option value="9">Nine</option>
+                        </select>
+                        <textarea placeholder="Additional Notes" name="note"></textarea>
+                        <button type="submit" name="save">Reserve</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </section>
+
+     <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="upper">
+            <h1>GET IN TOUCH TODAY</h1>
+            <p>Get your membership with Bangladesh's biggest lifestyle lounge and enjoy exclusive perks,access to
+                premium amenities and unforgettable experiences.</p>
+        </div>
+        <div class="lower">
+             <!-- Contact Information -->
+            <div class="boxes">
+                <h2>
+                    LOCATION
+                </h2>
+                <p>
+                    Road-9, Avenue-2, Mirpur DOHS Cultural Center, Mirpur DOHS, Dhaka.
+                </p>
+            </div>
+            <div class="boxes">
+                <h2>
+                    EMAIL ADDRESS
+                </h2>
+                <p>
+                    starbase1@gmail.com
+                </p>
+            </div>
+            <div class="boxes">
+                <h2>
+                    CONTACT NUMBER
+                </h2>
+                <p>
+                    +880 17 7611 7766
+                </p>
+            </div>
+        </div>
+
     </footer>
 
-    <!-- External JS Scripts -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- External JS-Scripts -->
+    <script src="./Starbase/Cafe/js/jquery-3.2.1.min.js"></script>
     <script src="./Starbase/Cafe/js/bootstrap.min.js"></script>
     <script src="./Starbase/Cafe/js/owl.carousel.min.js"></script>
-    <script src="./Starbase/Cafe/js/parallax.min.js"></script>
+    <script src="./Starbase/Cafe/js/circle-progress.min.js"></script>
     <script src="./Starbase/Cafe/js/main.js"></script>
-    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/5937645e/cloudflare-static/rocket-loader.min.js"
-        data-cf-settings="b3451030-54b2-447a-9bcf-c29babb905d2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+    </script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816"
+        integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw=="
+        data-cf-beacon='{"rayId":"7c117abcafc291ab","version":"2023.4.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}'
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
