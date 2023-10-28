@@ -125,7 +125,7 @@ include 'frontend_cafe.php';
                 <li><a href="./salon.php">SALON</a></li>
                 <li><a href="./parlor.php">PARLOR</a></li>
                 <li>
-                    <!-- Conditional Dropdown Menu for Member -->
+                    <!-- Conditional Dropdown Menu for Logged-In Member -->
                     <?php if ($_SESSION['member_logged_in'] == true) { ?>
                     <div class="dropdown">
                         <a style="color: #fff;" class="active">
@@ -137,14 +137,14 @@ include 'frontend_cafe.php';
                         </div>
                     </div>
                     <?php } else { ?>
-                        <!-- Login Option for Non-Members -->
+                        <!-- Login Option for Online Non Logged-In Members -->
                         <a href="./login.php">LOGIN</a>
                     <?php } ?>
                 </li>
                 <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
             </ul>
 
-            <!-- Social Media Icons -->
+            <!-- Social Media Clickable Icons -->
             <div class="header-right">
                 <div class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center">
                     <a href="https://www.facebook.com/StarbaseClub/" target="_blank"><span
@@ -197,8 +197,6 @@ include 'frontend_cafe.php';
                 <h2>Our Services</h2>
             </div>
 
-            <!-- Our Menu -->
-
             <div class="row services">
                 <div class="col-lg-3 col-md-6 service-item">
                     <i class="flaticon-005-coffee-1"></i>
@@ -223,6 +221,7 @@ include 'frontend_cafe.php';
 
     <section class="menu-section spad set-bg" data-setbg="./Starbase/Cafe/img/menu-bg.jpg">
         <div class="container">
+            <!-- Our Menu -->
             <div class="section-title text-white">
                 <i class="flaticon-022-tray"></i>
                 <h2>Our Menu</h2>
@@ -252,7 +251,7 @@ include 'frontend_cafe.php';
                 <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
                     <div class="row">
 
-                        <!-- Menu Items -->
+                        <!-- Menu Items with Brief Description -->
                         <div class="col-lg-6">
 
                             <div class="menu-item">
