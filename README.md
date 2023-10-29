@@ -1,9 +1,8 @@
-![Uploading github (2).png…]()
-
+![github (2)](https://github.com/khalidhasananik/CSE327-Group-7/assets/83982215/b7cd2a44-d953-4517-971b-21fbdd04d08c)
 
 # Welcome to STARBASE - CSE327 Group-7
 
-Hello there, and welcome to the STARBASE project, brought to you by CSE327 Group-7! We're excited to have you on board as we embark on this exciting journey to create an amazing website.
+Hello there, and welcome to the STARBASE project, brought to you by CSE327 Group-7! We're excited to have you on board as we embark on this exciting journey to create a fantastic website.
 
 ## About STARBASE
 
