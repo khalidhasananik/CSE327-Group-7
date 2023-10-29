@@ -111,6 +111,7 @@ include 'frontend_query.php';
     <!-- Header Section -->
     <header class="header-section">
         <div class="header-warp">
+            <!-- Navigation Bar Begins -->
             <div class="site-logo">
                 <h2>STARBASE</h2>
             </div>
@@ -118,7 +119,7 @@ include 'frontend_query.php';
             <div class="nav-switch">
                 <i class="fa fa-bars"></i>
             </div>
-
+            <!-- Navigation Bar Links -->
             <ul class="main-menu">
                 <li><a href="./index.php" class="active">HOME</a></li>
                 <li><a href="./programs.php">PROGRAMS</a></li>
@@ -143,6 +144,9 @@ include 'frontend_query.php';
                 </li>
 
             </ul>
+            <!-- Navigation Bar Links Ends -->
+
+            <!-- Header Right Side Icons -->
             <div class="header-right">
                 <div class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center">
                     <a href="https://www.facebook.com/StarbaseClub/" target="_blank"><span
@@ -153,8 +157,11 @@ include 'frontend_query.php';
                             class="icon-map-marker"></span></a>
                 </div>
             </div>
+            <!-- Header Right Side Icons Ends -->
         </div>
+        <!-- Navigation Bar Ends -->
     </header>
+    <!-- Header Section Ends -->
 
 
     <section class="hero-section">

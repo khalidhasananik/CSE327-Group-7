@@ -126,7 +126,7 @@ include './config/constants.php';
                 <i class="fa fa-bars"></i>
             </div>
 
-            <!-- Navigation Bar Buttons -->
+            <!-- Navigation Bar Links -->
             <ul class="main-menu">
                 <li><a href="./index.php">HOME</a></li>
                 <li><a href="./programs.php">PROGRAMS</a></li>
@@ -151,7 +151,7 @@ include './config/constants.php';
                 </li>
                 <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
             </ul>
-            <!-- Navigation Bar Buttons Ends -->
+            <!-- Navigation Bar Links Ends -->
             <!-- Social Media Links/ Location -->
             <div class="header-right">
                 <div class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center">
@@ -163,6 +163,7 @@ include './config/constants.php';
                             class="icon-map-marker"></span></a>
                 </div>
             </div>
+            <!-- Social Media Links/ Location Ends -->
         </div>
         <!-- Navigation Bar Ends -->
     </header>
