@@ -1,11 +1,9 @@
 <?php
     // ini_set('display_errors', 1);
-    // Include necessary files and set up configurations
-    include '../../config/db_connection.php';// Include the database connection file
-    include '../../config/constants.php';// Include constants and configuration settings
+    include '../../config/db_connection.php';
+    include '../../config/constants.php';
 
-    // Check if the admin is logged in
-    if ($_SESSION['admin_logged_in'] == true) { // Include additional queries specific to this page
+    if ($_SESSION['admin_logged_in'] == true) {
         include 'query.php';
 ?>
 <!doctype html>
@@ -30,7 +28,7 @@
   </head>
   <body>
     <?php
-        include '../nav.php';// Include the navigation bar specific to this page
+        include '../nav.php';
     ?>
 
     <div class="container">
@@ -62,8 +60,7 @@
                 </tr>
               </thead>
               <tbody>
-                <?php $id = 1; while ($row = mysqli_fetch_assoc($s_query)) {?>  
-                  <!-- Display member details in table rows -->          
+                <?php $id = 1; while ($row = mysqli_fetch_assoc($s_query)) {?>            
                 <tr class="middle-td">
                   <td scope="row"><?= $id++;?></td>
                   <td><?= $row['mname']; ?></td>
@@ -73,7 +70,6 @@
                   <td><?= $row['pname'] . ' (' . intval($row['month_duration']) . ' month @ TAKA ' . $row['price'] . ')' ?></td>
                   <td><?= $row['discount']; ?></td>
                   <td>
-                    <!-- Edit and Delete buttons for each member -->
                     <div class="d-flex">
                       <a href=<?= "updateMember.php?member_id=$row[mid]" ?>  class="btn btn-success m-1">Edit</a>
                       <form action="<?= "query.php?member_id=$row[mid]" ?>" method="post" onsubmit="return confirm('Do you really want to delete the member?');">
@@ -100,7 +96,6 @@
 
 <?php
     } else {
-       // If the admin is not logged in, redirect to the login page
         header("location:$baseURL/admin/index.php?msg=login_first");
     }
 ?>

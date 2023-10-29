@@ -1,15 +1,10 @@
 <?php
-    include '../config/db_connection.php';  // Include the database connection configuration
-    include '../config/constants.php'; // Include constants used in the application
+    include '../config/db_connection.php';
+    include '../config/constants.php';
 
-
-// Function to determine if a navigation link should have the "active" class
     function getClassesOfLink($requestUri) {
-        // Get the current file name from the request URI
         $current_file_name = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-
-        // Check if the current file name contains the specified request URI
-        // If it does, the link is considered active and gets the "active" class
+        
         if (strpos($current_file_name, $requestUri))
             echo 'class="nav-link active"';
         else
@@ -17,7 +12,6 @@
     }
 ?>
 
-<!-- Navigation bar -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand me-5" href="<?=$baseURL?>/admin/home.php">
@@ -28,7 +22,6 @@
         </button>
         <div class="ms-5 collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
             <ul class="navbar-nav">
-                <!-- Navigation links with the "active" class based on the current page -->
                 <li class="nav-item">
                     <a <?=getClassesOfLink("members")?> href="<?=$baseURL?>/admin/members/index.php">Members</a>
                 </li>
@@ -42,18 +35,12 @@
                     <a <?=getClassesOfLink("reservations")?>
                         href="<?=$baseURL?>/admin/reservations/index.php">Reservations</a>
                 </li>
-                <li class="nav-item">
-                    <a <?=getClassesOfLink("reviews")?>
-                        href="<?=$baseURL?>/admin/reviews/index.php">Reviews</a>
-                </li>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <!-- Display the admin's name and provide a dropdown menu for options -->
                     <a class="nav-link admin dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown"><?php echo $_SESSION['adminName'];?></a>
                     <ul class="dropdown-menu">
-                         <!-- Option to log out -->
                         <li><a class="dropdown-item" href="<?=$baseURL?>/admin/logout.php">Logout</a></li>
                     </ul>
                 </li>

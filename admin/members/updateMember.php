@@ -1,10 +1,10 @@
 <?php
     // ini_set('display_errors', 1);
-    include '../../config/db_connection.php'; // Include the database connection configuration
-    include '../../config/constants.php'; // Include constants used in the application
+    include '../../config/db_connection.php';
+    include '../../config/constants.php';
 
     if ($_SESSION['admin_logged_in'] == true) {
-        include 'query.php'; // Include a file for executing database queries
+        include 'query.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -28,8 +28,7 @@
   </head>
   <body>
     <?php
-        include '../nav.php'; // Include a navigation menu
-
+        include '../nav.php';
     ?>
 
     <!-- Edit Member Form -->
@@ -93,7 +92,6 @@
 
 <?php
     } else {
-      // Redirect to the login page if not logged in
         header("location:$baseURL/admin/index.php?msg=login_first");
     }
 ?>
