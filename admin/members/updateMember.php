@@ -93,6 +93,7 @@
 
 <?php
     } else {
+      
        // If an admin is not logged in, redirect to the login page.
         header("location:$baseURL/admin/index.php?msg=login_first");
     }

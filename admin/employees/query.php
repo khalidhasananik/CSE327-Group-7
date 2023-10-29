@@ -1,6 +1,6 @@
 <?php
     include '../../config/db_connection.php';// Include the database connection file
-    include '../../config/constants.php';// Include the constants file for configuration
+    include '../../config/constants.php';
 
     // =========== Fetch Employee List ==========
     // $select = "SELECT * FROM `employee`";

@@ -1,7 +1,7 @@
 <?php
     // ini_set('display_errors', 1);
     include '../../config/db_connection.php';// Include the database connection file.
-    include '../../config/constants.php';// Include the constants file.
+    include '../../config/constants.php';
 
     // Check if an admin is logged in
     if ($_SESSION['admin_logged_in'] == true) {

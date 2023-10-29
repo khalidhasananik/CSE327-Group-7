@@ -56,7 +56,7 @@
                     // redirect to list page
                     header("location:$baseURL/admin/members/index.php");
                 } else {
-                    // echo mysqli_error($conn);
+                    
                     // display error message and redirect back to add member page
                     echo "<script>alert('Something went wrong. Please try again!!'); window.location.href='$baseURL/admin/members/addMember.php';</script>";
                 }

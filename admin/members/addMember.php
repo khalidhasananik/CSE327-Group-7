@@ -3,6 +3,7 @@
     include '../../config/db_connection.php';// Include the database connection file.
     include '../../config/constants.php';// Include the constants file.
 
+    
     // Check if an admin is logged in
     if ($_SESSION['admin_logged_in'] == true) {
         include 'query.php';// Include the file for handling database queries related to employees
