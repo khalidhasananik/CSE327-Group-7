@@ -1,12 +1,10 @@
-<!-- Programs Page of the Website -->
-
-<!-- Including the PHP Files -->
+<!-- Including the PHP files for Backend connection -->
 <?php
 include './config/db_connection.php';
 include './config/constants.php';
 ?>
 
-<!-- Code Begins -->
+<!-- HTML Begins -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -104,7 +102,7 @@ include './config/constants.php';
 </head>
 
 <body>
-    <!-- Preloader for when the site loads -->
+    <!-- Preloader for when the site boots up -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -112,6 +110,7 @@ include './config/constants.php';
     <!-- Header Section -->
     <header class="header-section">
         <div class="header-warp">
+            <!-- Navigation Bar Begins -->
             <div class="site-logo">
                 <h2>STARBASE</h2>
             </div>
@@ -157,7 +156,9 @@ include './config/constants.php';
                 </div>
             </div>
         </div>
+        <!-- Navigation Bar Ends -->
     </header>
+    <!-- Header Section Ends -->
 
     <!-- Body of the website -->
     <section class="spad">

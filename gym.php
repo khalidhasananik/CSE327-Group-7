@@ -1,4 +1,4 @@
-<!-- Connection Status -->
+<!-- Including the PHP files for Backend connection -->
 <?php
 include './config/db_connection.php';
 include './config/constants.php';
@@ -113,9 +113,10 @@ include './config/constants.php';
         <div class="loader"></div>
     </div>
 
-    <!-- Navigation Bar Begins -->
+    <!-- Header Section -->
     <header class="header-section">
         <div class="header-warp">
+            <!-- Navigation Bar Begins -->
             <div class="site-logo">
                 <h2>STARBASE</h2>
             </div>
@@ -125,7 +126,7 @@ include './config/constants.php';
                 <i class="fa fa-bars"></i>
             </div>
 
-            <!-- Navigation Bar Buttons -->
+            <!-- Navigation Bar Links -->
             <ul class="main-menu">
                 <li><a href="./index.php">HOME</a></li>
                 <li><a href="./programs.php">PROGRAMS</a></li>
@@ -135,22 +136,22 @@ include './config/constants.php';
                 <li><a href="./parlor.php">PARLOR</a></li>
                 <li>
                     <?php if ($_SESSION['member_logged_in'] == true) { ?>
-                    <div class="dropdown">
-                        <a style="color: #fff;" class="active">
-                            <?php echo strtoupper($_SESSION['memberName']); ?>
-                        </a>
-                        <div class="dropdown-content">
-                            <a class="dropdown-item" href="<?= $baseURL ?>/dashboard.php">Dashboard</a>
-                            <a class="dropdown-item" href="<?= $baseURL ?>/frontend_logout.php">Logout</a>
+                        <div class="dropdown">
+                            <a style="color: #fff;" class="active">
+                                <?php echo strtoupper($_SESSION['memberName']); ?>
+                            </a>
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" href="<?= $baseURL ?>/dashboard.php">Dashboard</a>
+                                <a class="dropdown-item" href="<?= $baseURL ?>/frontend_logout.php">Logout</a>
+                            </div>
                         </div>
-                    </div>
                     <?php } else { ?>
-                    <a href="./login.php">LOGIN</a>
+                        <a href="./login.php">LOGIN</a>
                     <?php } ?>
                 </li>
                 <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
             </ul>
-            <!-- Navigation Bar Buttons Ends -->
+            <!-- Navigation Bar Links Ends -->
             <!-- Social Media Links/ Location -->
             <div class="header-right">
                 <div class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center">
@@ -162,9 +163,12 @@ include './config/constants.php';
                             class="icon-map-marker"></span></a>
                 </div>
             </div>
+            <!-- Social Media Links/ Location Ends -->
         </div>
+        <!-- Navigation Bar Ends -->
     </header>
-    <!-- Navigation Bar Ends -->
+    <!-- Header Section Ends -->
+
 
     <!-- Hero Section/ Owl carousel -->
     <section class="hero-section">
