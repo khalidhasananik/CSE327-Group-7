@@ -1,7 +1,5 @@
 <?php
-    include '../assets/backend/db_connection.php'; // Include the database connection configuration
-
-    // Check if the admin is logged in
+    include '../assets/backend/db_connection.php';
     if($_SESSION['admin_logged_in'] == true){  
     include '../assets/backend/task.php';
     include '../assets/backend/employee.php';
@@ -14,7 +12,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Empolyee Management System</title>
-    <!-- Include Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css">
   </head>
@@ -22,9 +19,7 @@
         <!-- Navbar -->
         <nav class="navbar bg-light">
             <div class="container">
-                <!-- Display the admin's name -->
                 <span class="navbar-brand mb-0 h1"><?php echo $_SESSION['adminName'];?></span>
-                <!-- Home and Logout buttons -->
                 <div class=" logout-btn"><a href="home.php?username=<?php echo $_SESSION['adminName'];?>">home</a></div>
                 <div class=" logout-btn"><a href="../assets/backend/logout.php">Logout</a></div>
             </div>
@@ -40,7 +35,6 @@
                                     <span  class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Todo</span>    
                             </div>
                             <div id="add-todo-form" class="mt-5">
-                                <!-- Form for adding a task -->
                                 <form action=<?php echo "../assets/backend/task.php?employee_id=".$_GET['employee_id']?> method="post" >
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" id="add-task" name="add-task" placeholder="Enter your task here"  >
@@ -71,16 +65,10 @@
                                     </div>
                                 </td>
                                 <td class="text-center d-flex justify-content-center">
-
-                                <!-- Completed button -->
                                     <button class="btn btn-success m-1 <?php if($task['status']==1) {echo "d-inline";}else{echo "d-none";}?>" >Completed</button>
 
                                     <form class="" action="../assets/backend/task.php?employee_id=<?php echo $_GET['employee_id'];?>&task_id=<?php echo $task['id'];?>" method="post">
-
-                                    <!-- Mark as Completed button -->
                                         <button class="btn btn-warning m-1 <?php if($task['status']==0) {echo "d-inline";}else{echo "d-none";}?>" name="mCompleted-btn" id="mCompleted-btn" type="submit">Mark as Completed</button>
-
-                                        <!-- Delete button -->
                                         <button class="btn btn-danger m-1 d-inline" name="task-dlt-btn" id="task-dlt-btn" type="submit">Delete</button>
 
                                     </form>
@@ -97,14 +85,8 @@
             </div>
         </div>
         <!-- ./Todo section  -->
-
-        <!-- Include Font Awesome JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-     <!-- Include Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
-    <!-- Include jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     
     <script>
@@ -119,7 +101,6 @@
 
 <?php
     }else{
-        // If not logged in, redirect to the login page
         header("location:/admin/index.php?msg=login_first");
     }
 ?>
