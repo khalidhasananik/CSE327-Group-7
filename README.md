@@ -1,15 +1,10 @@
 ![github (2)](https://github.com/khalidhasananik/CSE327-Group-7/assets/83982215/b7cd2a44-d953-4517-971b-21fbdd04d08c)
 
+![Discord](https://img.shields.io/discord/807619926855516201) ![GitHub contributors](https://img.shields.io/github/contributors/khalidhasananik/CSE327-Group-7) ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/khalidhasananik/CSE327-Group-7)
+
 # Welcome to STARBASE - CSE327 Group-7
 
 Hello there, and welcome to the STARBASE project, brought to you by CSE327 Group-7! We're excited to have you on board as we embark on this exciting journey to create a fantastic website.
-
-![Discord](https://img.shields.io/discord/807619926855516201)
-
-![GitHub contributors](https://img.shields.io/github/contributors/khalidhasananik/CSE327-Group-7)
-
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/khalidhasananik/CSE327-Group-7)
-
 
 ## About STARBASE
 
