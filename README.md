@@ -1,8 +1,14 @@
+![github (2)](https://github.com/khalidhasananik/CSE327-Group-7/assets/83982215/15d55592-4da7-4d20-a8f7-b68b618c1818)
+
 # Welcome to STARBASE - CSE327 Group-7
 
+<<<<<<< HEAD
 ## some md file
 
 Hello there, and welcome to the STARBASE project, brought to you by CSE327 Group-7! We're excited to have you on board as we embark on this exciting journey to create an amazing website.
+=======
+Hello there, and welcome to the STARBASE project, brought to you by CSE327 Group-7! We're excited to have you on board as we embark on this exciting journey to create a fantastic website.
+>>>>>>> 408bdec19d72f8cd9303502ab6ddb0577b08d100
 
 ## About STARBASE
 

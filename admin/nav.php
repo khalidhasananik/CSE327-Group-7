@@ -4,7 +4,7 @@
 
     function getClassesOfLink($requestUri) {
         $current_file_name = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-
+        
         if (strpos($current_file_name, $requestUri))
             echo 'class="nav-link active"';
         else
@@ -34,10 +34,6 @@
                 <li class="nav-item">
                     <a <?=getClassesOfLink("reservations")?>
                         href="<?=$baseURL?>/admin/reservations/index.php">Reservations</a>
-                </li>
-                <li class="nav-item">
-                    <a <?=getClassesOfLink("reviews")?>
-                        href="<?=$baseURL?>/admin/reviews/index.php">Reviews</a>
                 </li>
             </ul>
             <ul class="navbar-nav">

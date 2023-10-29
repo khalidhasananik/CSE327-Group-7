@@ -15,9 +15,6 @@ include 'frontend_cafe.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="./Starbase/Cafe/img/logo.jpeg" rel="shortcut icon" />
-    
-    
-    <!-- External CSS Styles -->
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap"
         rel="stylesheet" />
@@ -100,12 +97,11 @@ include 'frontend_cafe.php';
 </head>
 
 <body>
-    <!-- Preloader -->
+
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
-    <!-- Header Section -->
     <header class="header-section">
         <div class="header-warp">
             <div class="site-logo">
@@ -116,7 +112,6 @@ include 'frontend_cafe.php';
                 <i class="fa fa-bars"></i>
             </div>
 
-            <!-- Main Menu -->
             <ul class="main-menu">
                 <li><a href="./index.php">HOME</a></li>
                 <li><a href="./programs.php">PROGRAMS</a></li>
@@ -125,7 +120,6 @@ include 'frontend_cafe.php';
                 <li><a href="./salon.php">SALON</a></li>
                 <li><a href="./parlor.php">PARLOR</a></li>
                 <li>
-                    <!-- Conditional Dropdown Menu for Logged-In Member -->
                     <?php if ($_SESSION['member_logged_in'] == true) { ?>
                     <div class="dropdown">
                         <a style="color: #fff;" class="active">
@@ -137,14 +131,11 @@ include 'frontend_cafe.php';
                         </div>
                     </div>
                     <?php } else { ?>
-                        <!-- Login Option for Online Non Logged-In Members -->
-                        <a href="./login.php">LOGIN</a>
+                    <a href="./login.php">LOGIN</a>
                     <?php } ?>
                 </li>
                 <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
             </ul>
-
-            <!-- Social Media Clickable Icons -->
             <div class="header-right">
                 <div class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center">
                     <a href="https://www.facebook.com/StarbaseClub/" target="_blank"><span
@@ -160,7 +151,6 @@ include 'frontend_cafe.php';
 
 
     <section class="hero-section">
-        <!-- Owl Carousel -->
         <div class="hero-slider owl-carousel">
             <div class="hs-item set-bg" data-setbg="./Starbase/Cafe/img/slider/slider-1.jpg">
                 <div class="hs-content">
@@ -188,15 +178,12 @@ include 'frontend_cafe.php';
         </div>
     </section>
 
-
-    <!-- Our Services -->
     <section class="services-section spad">
         <div class="container">
             <div class="section-title">
                 <i class="flaticon-022-tray"></i>
                 <h2>Our Services</h2>
             </div>
-
             <div class="row services">
                 <div class="col-lg-3 col-md-6 service-item">
                     <i class="flaticon-005-coffee-1"></i>
@@ -221,13 +208,11 @@ include 'frontend_cafe.php';
 
     <section class="menu-section spad set-bg" data-setbg="./Starbase/Cafe/img/menu-bg.jpg">
         <div class="container">
-            <!-- Our Menu -->
             <div class="section-title text-white">
                 <i class="flaticon-022-tray"></i>
                 <h2>Our Menu</h2>
             </div>
-            
-            <!-- Categories -->
+
             <ul class="menu-tab-nav nav nav-tabs" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1"
@@ -250,8 +235,6 @@ include 'frontend_cafe.php';
 
                 <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
                     <div class="row">
-
-                        <!-- Menu Items with Brief Description -->
                         <div class="col-lg-6">
 
                             <div class="menu-item">
@@ -521,8 +504,6 @@ include 'frontend_cafe.php';
         </div>
     </section>
 
-
-    <!-- Make a Reservation -->
     <section class="services-section spad">
         <div class="container4">
             <div class="about-us">
@@ -559,7 +540,6 @@ include 'frontend_cafe.php';
         </div>
     </section>
 
-     <!-- Footer Section -->
     <footer class="footer-section">
         <div class="upper">
             <h1>GET IN TOUCH TODAY</h1>
@@ -567,7 +547,6 @@ include 'frontend_cafe.php';
                 premium amenities and unforgettable experiences.</p>
         </div>
         <div class="lower">
-             <!-- Contact Information -->
             <div class="boxes">
                 <h2>
                     LOCATION
@@ -596,7 +575,6 @@ include 'frontend_cafe.php';
 
     </footer>
 
-    <!-- External JS-Scripts -->
     <script src="./Starbase/Cafe/js/jquery-3.2.1.min.js"></script>
     <script src="./Starbase/Cafe/js/bootstrap.min.js"></script>
     <script src="./Starbase/Cafe/js/owl.carousel.min.js"></script>
