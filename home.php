@@ -1,5 +1,5 @@
 <?php
-include 'assets/backend/db_connection.php';
+include 'assets/backend/db_connection.php';// Include the database connection file.
 if ($_SESSION['employee_logged_in'] == true) {
     include 'assets/backend/task.php';
     include 'assets/backend/employee.php';
