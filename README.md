@@ -1,4 +1,5 @@
-![welcome to](https://github.com/khalidhasananik/CSE327-Group-7/assets/83982215/ab8abcf0-04b6-4fe0-9c3f-73c48cc7b8d2)
+![welcome to (1)](https://github.com/khalidhasananik/CSE327-Group-7/assets/83982215/66a96d25-c3cc-4c1d-8201-fc09cc94d06b | width = 900) 
+
 
 
 # Welcome to STARBASE - CSE327 Group-7
