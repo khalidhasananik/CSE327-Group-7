@@ -1,8 +1,8 @@
 <?php
     // ini_set('display_errors', 1);
-    include '../../config/db_connection.php';
-    include '../../config/constants.php';
-
+    include '../../config/db_connection.php';// Include the database connection file.
+    include '../../config/constants.php';// Include the constants file.
+ // Check if an admin is logged in
     if ($_SESSION['admin_logged_in'] == true) {
         include 'query.php';
 ?>
@@ -28,7 +28,7 @@
   </head>
   <body>
     <?php
-        include '../nav.php';
+        include '../nav.php'; // Include the navigation bar.
     ?>
 
     <!-- Edit Employee Form -->
@@ -94,6 +94,7 @@
 
 <?php
     } else {
+       // If an admin is not logged in, redirect to the login page.
         header("location:$baseURL/admin/index.php?msg=login_first");
     }
 ?>
