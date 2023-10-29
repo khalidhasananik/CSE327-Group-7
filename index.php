@@ -1,6 +1,7 @@
 <?php
 include './config/db_connection.php';
 include './config/constants.php';
+include 'frontend_query.php';
 ?>
 
 <!DOCTYPE html>
@@ -268,6 +269,51 @@ include './config/constants.php';
         </div>
     </section>
 
+    <section class="ftco-section testimony-section pad-bottom">
+        <div class="container">
+            <div class="about-us">
+                <h1>Testimonials</h1>
+            </div>
+            <div class="row ftco-animate">
+                <div class="col-md-12">
+                    <div class="carousel-testimony owl-carousel">
+                    <?php while ($row = mysqli_fetch_assoc($review_query)) { ?>
+                        <div class="item f-height">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="text">
+                                    <p class="mb-4 pb-1 pl-4 line">
+                                        <?= $row['review']; ?>
+                                    </p>
+                                    <div class="d-flex align-items-center mb-auto">
+                                        <div class="ml-4">
+                                            <p class="name"><?= $row['c_name']; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <?php if ($_SESSION['member_logged_in'] == true) { ?>
+        <div class="container2">
+            <div class="about-us">
+                <h2>Write a review for us</h2>
+            </div>
+            <div class="main">
+                <div class="signup">
+                    <form action="frontend_query.php" method="post">
+                        <textarea placeholder="Your Review" rows="3" required name="review" class=r-textarea></textarea>
+                        <button type="submit" name="saveReview" class="r-button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <?php } ?>
+    </section>
 
     <footer class="footer-section">
         <div class="upper">
