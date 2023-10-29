@@ -14,15 +14,15 @@ include 'frontend_parlor.php';
     <meta name="keywords" content="restaurant, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Link to the website's favicon -->
+    <!-- Website's Favicon -->
     <link href="./Starbase/Parlor/img/logo.jpeg" rel="shortcut icon" />
     
-    <!-- Link to external fonts -->
+    <!-- Link to External fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap"
         rel="stylesheet" />
 
-    <!-- Link to external CSS stylesheets for styling the page -->    
+    <!-- External CSS Stylesheets for styling the page -->    
     <link rel="stylesheet" href="./Starbase/Parlor/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./Starbase/Parlor/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./Starbase/Parlor/css/flaticon.css" />
@@ -222,7 +222,7 @@ include 'frontend_parlor.php';
         </div>
     </section>
 
-    <!-- Image gallery section -->
+    <!-- Image gallery Section -->
     <div class="gallery">
         <div class="container5">
 
