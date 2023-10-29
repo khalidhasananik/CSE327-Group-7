@@ -1,11 +1,12 @@
 <?php
-    include '../../config/db_connection.php';
-    include '../../config/constants.php';
+    include '../../config/db_connection.php';// Include the database connection file
+    include '../../config/constants.php';// Include the constants file for configuration
 
     // =========== Fetch Employee List ==========
     // $select = "SELECT * FROM `employee`";
     // $s_query = mysqli_query($conn, $select);
 
+    // Check if the employee-search-btn form is submitted
     if (isset($_POST['employee-search-btn'])) {
         $search = $_POST['search'];
         header("location:$baseURL/admin/employees/index.php?search=$search");
@@ -13,14 +14,17 @@
 
     if ($_GET['search']) {
         $search = $_GET['search'];
+        // Build a SQL query to search for employees based on the provided search criteria
         $select = "SELECT * FROM `employee` WHERE phone_no LIKE '$search%' OR email LIKE '$search%' OR name LIKE '$search%'";
         $s_query = mysqli_query($conn, $select);
     } else {
+        // Fetch all employees if no search parameter is provided
         $select = "SELECT * FROM `employee`";
         $s_query = mysqli_query($conn, $select);
     }
 
     // =========== Add Employee ===========
+    // Retrieve input fields from the add employee form
     $employeeName = $_POST['employeeName'];
     $employeeEmail = $_POST['employeeEmail'];
     $employeePhone = $_POST['employeePhone'];
@@ -70,6 +74,7 @@
     $sid_row = mysqli_fetch_assoc($sid_query);
 
     // ============ Update Employee ==================
+    // Retrieve input fields from the update employee form
     $editEmployeeName = $_POST['editEmployeeName'];
     $editEmployeeEmail = $_POST['editEmployeeEmail'];
     $editEmployeePhone = $_POST['editEmployeePhone'];
@@ -105,8 +110,10 @@
         $d_query = mysqli_query($conn, $delete);
         if ($d_query) {
             // header("location:$baseURL/admin/employees/index.php");
+            // Display a success message and redirect to the employee list page
             echo "<script>alert('Employee deleted!!'); window.location.href='$baseURL/admin/employees/index.php';</script>";
         } else {
+            // Display an error message and redirect to the employee list page
             echo "<script>alert('Something went wrong. Please try again!!'); window.location.href='$baseURL/admin/employees/index.php';</script>";
         }
     }
