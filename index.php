@@ -36,69 +36,69 @@ include 'frontend_query.php';
 
 
     <script nonce="b3451030-54b2-447a-9bcf-c29babb905d2">
-    (function(w, d) {
-        ! function(dk, dl, dm, dn) {
-            dk[dm] = dk[dm] || {};
-            dk[dm].executed = [];
-            dk.zaraz = {
-                deferred: [],
-                listeners: []
-            };
-            dk.zaraz.q = [];
-            dk.zaraz._f = function(dp) {
-                return function() {
-                    var dq = Array.prototype.slice.call(arguments);
-                    dk.zaraz.q.push({
-                        m: dp,
-                        a: dq
-                    })
-                }
-            };
-            for (const dr of ["track", "set", "debug"]) dk.zaraz[dr] = dk.zaraz._f(dr);
-            dk.zaraz.init = () => {
-                var ds = dl.getElementsByTagName(dn)[0],
-                    dt = dl.createElement(dn),
-                    du = dl.getElementsByTagName("title")[0];
-                du && (dk[dm].t = dl.getElementsByTagName("title")[0].text);
-                dk[dm].x = Math.random();
-                dk[dm].w = dk.screen.width;
-                dk[dm].h = dk.screen.height;
-                dk[dm].j = dk.innerHeight;
-                dk[dm].e = dk.innerWidth;
-                dk[dm].l = dk.location.href;
-                dk[dm].r = dl.referrer;
-                dk[dm].k = dk.screen.colorDepth;
-                dk[dm].n = dl.characterSet;
-                dk[dm].o = (new Date).getTimezoneOffset();
-                if (dk.dataLayer)
-                    for (const dy of Object.entries(Object.entries(dataLayer).reduce(((dz, dA) => ({
+        (function (w, d) {
+            ! function (dk, dl, dm, dn) {
+                dk[dm] = dk[dm] || {};
+                dk[dm].executed = [];
+                dk.zaraz = {
+                    deferred: [],
+                    listeners: []
+                };
+                dk.zaraz.q = [];
+                dk.zaraz._f = function (dp) {
+                    return function () {
+                        var dq = Array.prototype.slice.call(arguments);
+                        dk.zaraz.q.push({
+                            m: dp,
+                            a: dq
+                        })
+                    }
+                };
+                for (const dr of ["track", "set", "debug"]) dk.zaraz[dr] = dk.zaraz._f(dr);
+                dk.zaraz.init = () => {
+                    var ds = dl.getElementsByTagName(dn)[0],
+                        dt = dl.createElement(dn),
+                        du = dl.getElementsByTagName("title")[0];
+                    du && (dk[dm].t = dl.getElementsByTagName("title")[0].text);
+                    dk[dm].x = Math.random();
+                    dk[dm].w = dk.screen.width;
+                    dk[dm].h = dk.screen.height;
+                    dk[dm].j = dk.innerHeight;
+                    dk[dm].e = dk.innerWidth;
+                    dk[dm].l = dk.location.href;
+                    dk[dm].r = dl.referrer;
+                    dk[dm].k = dk.screen.colorDepth;
+                    dk[dm].n = dl.characterSet;
+                    dk[dm].o = (new Date).getTimezoneOffset();
+                    if (dk.dataLayer)
+                        for (const dy of Object.entries(Object.entries(dataLayer).reduce(((dz, dA) => ({
                             ...dz[1],
                             ...dA[1]
                         }))))) zaraz.set(dy[0], dy[1], {
-                        scope: "page"
-                    });
-                dk[dm].q = [];
-                for (; dk.zaraz.q.length;) {
-                    const dB = dk.zaraz.q.shift();
-                    dk[dm].q.push(dB)
-                }
-                dt.defer = !0;
-                for (const dC of [localStorage, sessionStorage]) Object.keys(dC || {}).filter((dE => dE
-                    .startsWith("_zaraz_"))).forEach((dD => {
-                    try {
-                        dk[dm]["z_" + dD.slice(7)] = JSON.parse(dC.getItem(dD))
-                    } catch {
-                        dk[dm]["z_" + dD.slice(7)] = dC.getItem(dD)
+                            scope: "page"
+                        });
+                    dk[dm].q = [];
+                    for (; dk.zaraz.q.length;) {
+                        const dB = dk.zaraz.q.shift();
+                        dk[dm].q.push(dB)
                     }
-                }));
-                dt.referrerPolicy = "origin";
-                dt.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(dk[dm])));
-                ds.parentNode.insertBefore(dt, ds)
-            };
-            ["complete", "interactive"].includes(dl.readyState) ? zaraz.init() : dk.addEventListener(
-                "DOMContentLoaded", zaraz.init)
-        }(w, d, "zarazData", "script");
-    })(window, document);
+                    dt.defer = !0;
+                    for (const dC of [localStorage, sessionStorage]) Object.keys(dC || {}).filter((dE => dE
+                        .startsWith("_zaraz_"))).forEach((dD => {
+                            try {
+                                dk[dm]["z_" + dD.slice(7)] = JSON.parse(dC.getItem(dD))
+                            } catch {
+                                dk[dm]["z_" + dD.slice(7)] = dC.getItem(dD)
+                            }
+                        }));
+                    dt.referrerPolicy = "origin";
+                    dt.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(dk[dm])));
+                    ds.parentNode.insertBefore(dt, ds)
+                };
+                ["complete", "interactive"].includes(dl.readyState) ? zaraz.init() : dk.addEventListener(
+                    "DOMContentLoaded", zaraz.init)
+            }(w, d, "zarazData", "script");
+        })(window, document);
     </script>
 </head>
 
@@ -129,17 +129,17 @@ include 'frontend_query.php';
                 <li><a href="./parlor.php">PARLOR</a></li>
                 <li>
                     <?php if ($_SESSION['member_logged_in'] == true) { ?>
-                    <div class="dropdown">
-                        <a style="color: #fff;" class="active">
-                            <?php echo strtoupper($_SESSION['memberName']); ?>
-                        </a>
-                        <div class="dropdown-content">
-                            <a class="dropdown-item" href="<?= $baseURL ?>/dashboard.php">Dashboard</a>
-                            <a class="dropdown-item" href="<?= $baseURL ?>/frontend_logout.php">Logout</a>
+                        <div class="dropdown">
+                            <a style="color: #fff;" class="active">
+                                <?php echo strtoupper($_SESSION['memberName']); ?>
+                            </a>
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" href="<?= $baseURL ?>/dashboard.php">Dashboard</a>
+                                <a class="dropdown-item" href="<?= $baseURL ?>/frontend_logout.php">Logout</a>
+                            </div>
                         </div>
-                    </div>
                     <?php } else { ?>
-                    <a href="./login.php">LOGIN</a>
+                        <a href="./login.php">LOGIN</a>
                     <?php } ?>
                 </li>
 
@@ -298,22 +298,22 @@ include 'frontend_query.php';
                 <div class="col-md-12">
                     <div class="carousel-testimony owl-carousel">
                         <?php while ($row = mysqli_fetch_assoc($review_query)) { ?>
-                        <div class="item f-height">
-                            <div class="testimony-wrap p-4 pb-5">
-                                <div class="text">
-                                    <p class="mb-4 pb-1 pl-4 line">
-                                        <?= $row['review']; ?>
-                                    </p>
-                                    <div class="d-flex align-items-center mb-auto">
-                                        <div class="ml-4">
-                                            <p class="name">
-                                                <?= $row['c_name']; ?>
-                                            </p>
+                            <div class="item f-height">
+                                <div class="testimony-wrap p-4 pb-5">
+                                    <div class="text">
+                                        <p class="mb-4 pb-1 pl-4 line">
+                                            <?= $row['review']; ?>
+                                        </p>
+                                        <div class="d-flex align-items-center mb-auto">
+                                            <div class="ml-4">
+                                                <p class="name">
+                                                    <?= $row['c_name']; ?>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         <?php } ?>
                     </div>
                 </div>
@@ -323,28 +323,32 @@ include 'frontend_query.php';
         <!-- Write a review section -->
         <!-- Only visible to logged in users -->
         <?php if ($_SESSION['member_logged_in'] == true) { ?>
-        <div class="container2">
-            <div class="about-us">
-                <h2>WRITE A REVIEW FOR US</h2>
-            </div>
-            <div class="main">
-                <div class="signup">
-                    <form action="frontend_query.php" method="post">
-                        <textarea placeholder="Your Review" rows="3" required name="review" class=r-textarea></textarea>
-                        <button type="submit" name="saveReview" class="r-button">Submit</button>
-                    </form>
+            <div class="container2">
+                <div class="about-us">
+                    <h2>WRITE A REVIEW FOR US</h2>
+                </div>
+                <div class="main">
+                    <div class="signup">
+                        <form action="frontend_query.php" method="post">
+                            <textarea placeholder="Your Review" rows="3" required name="review" class=r-textarea></textarea>
+                            <button type="submit" name="saveReview" class="r-button">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
         <?php } ?>
     </section>
+    <!-- Feedback Section Ends -->
 
+    <!-- Footer Section -->
     <footer class="footer-section">
+        <!-- Description -->
         <div class="upper">
             <h1>GET IN TOUCH TODAY</h1>
             <p>Get your membership with Bangladesh's biggest lifestyle lounge and enjoy exclusive perks,access to
                 premium amenities and unforgettable experiences.</p>
         </div>
+        <!-- Address/Contact info -->
         <div class="lower">
             <div class="boxes">
                 <h2>
@@ -373,6 +377,7 @@ include 'frontend_query.php';
         </div>
 
     </footer>
+    <!-- Footer Section Ends -->
 
     <script src="./Starbase/Home/js/jquery-3.2.1.min.js"></script>
     <script src="./Starbase/Home/js/bootstrap.min.js"></script>
@@ -380,14 +385,14 @@ include 'frontend_query.php';
     <script src="./Starbase/Home/js/circle-progress.min.js"></script>
     <script src="./Starbase/Home/js/main.js"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-23581568-13');
+        gtag('config', 'UA-23581568-13');
     </script>
     <script defer
         src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816"
