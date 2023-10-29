@@ -1,10 +1,10 @@
 <?php
     // ini_set('display_errors', 1);
-    include '../../config/db_connection.php';
-    include '../../config/constants.php';
+    include '../../config/db_connection.php';// Include the database connection file
+    include '../../config/constants.php';// Include the constants file for configurations
 
     if ($_SESSION['admin_logged_in'] == true) {
-        include 'query.php';
+        include 'query.php';// Include the file for handling database queries related to employees
 ?>
 <!doctype html>
 <html lang="en">
@@ -12,6 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Starbase Admin - Create Employee</title>
+     <!-- Include necessary CSS files -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="<?=$baseURL?>/assets/css/style.css">
     <style>
@@ -28,7 +29,7 @@
   </head>
   <body>
     <?php
-        include '../nav.php';
+        include '../nav.php';// Include the navigation menu
     ?>
 
 
@@ -41,6 +42,7 @@
         <h3 class="col-md-6 mt-2 offset-md-3 text-center">Add Employee</h3>
         <div class="col-md-6 offset-md-3 mt-2 mb-4 border rounded p-4">
           <form method="post" action="query.php">
+            <!-- Form fields for adding employee information -->
             <div class="mb-3">
               <label for="employeeName" class="form-label">Name</label>
               <input type="text" class="form-control" id="employeeName" name="employeeName" placeholder="Employee Name" required>
@@ -69,6 +71,7 @@
               <label for="employeeConfirmPassword" class="form-label">Confirm Password</label>
               <input type="password" class="form-control" id="employeeConfirmPassword" name="employeeConfirmPassword" placeholder="Confirm Password" required>
             </div>
+             <!-- Repeat similar form fields for other employee information (email, phone, address, salary, password) -->
             <button type="submit" id="add-employee-btn" name="add-employee-btn" class="btn btn-primary">Add Employee</button>
           </form>
         </div>
@@ -83,6 +86,7 @@
 
 <?php
     } else {
+      // Redirect to the login page if the admin is not logged in
         header("location:$baseURL/admin/index.php?msg=login_first");
     }
 ?>
