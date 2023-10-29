@@ -103,6 +103,25 @@ $(window).on('load', function () {
 		Fitness Section
 	--------------------*/
 
+function divideBy100(number) {
+   
+	return number / 100;
+	
+}
+
+function divide(numberOne, numberTwo) {
+  
+	return numberOne / numberTwo;
+	
+}
+
+function multiply(numberOne, numberTwo) {
+   
+	return numberOne * numberTwo;
+		
+}
+
+
 let userName = document.querySelector('#name');
 let userAge = document.querySelector('#age');
 let userGender = document.querySelector('#gender');
@@ -146,7 +165,8 @@ document.querySelector('#check').addEventListener('click', function () {
 		let w = userWeight.value * 1;
 		let age = userAge.value * 1;
 		let gender = userGender.value;
-		let bmi = w / ((h / 100) * (h / 100));
+		// let bmi = w / ((h / 100) * (h / 100));
+		let bmi = divide(w, multiply(divideBy100(h), divideBy100(h)));
 		if (bmi < 18.5) {
 			//underweight
 			if (gender === 'Male') {
