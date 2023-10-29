@@ -141,7 +141,6 @@ include 'frontend_cafe.php';
                         <a href="./login.php">LOGIN</a>
                     <?php } ?>
                 </li>
-                <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
             </ul>
 
             <!-- Social Media Clickable Icons -->
@@ -160,7 +159,7 @@ include 'frontend_cafe.php';
 
 
     <section class="hero-section">
-        <!-- Owl Carousel -->
+        <!-- Carousel -->
         <div class="hero-slider owl-carousel">
             <div class="hs-item set-bg" data-setbg="./Starbase/Cafe/img/slider/slider-1.jpg">
                 <div class="hs-content">
@@ -522,7 +521,7 @@ include 'frontend_cafe.php';
     </section>
 
 
-    <!-- Make a Reservation -->
+    <!-- Reservation Sections -->
     <section class="services-section spad">
         <div class="container4">
             <div class="about-us">

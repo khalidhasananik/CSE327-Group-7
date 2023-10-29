@@ -14,7 +14,7 @@ include 'frontend_query.php';
     <meta name="keywords" content="restaurant, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Link to the website's favicon -->
+    <!-- Website's favicon -->
     <link href="./Starbase/Salon/img/logo.jpeg" rel="shortcut icon" />
     
     <!-- Link to external fonts -->
@@ -22,7 +22,7 @@ include 'frontend_query.php';
         href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap"
         rel="stylesheet" />
 
-    <!-- Link to external CSS stylesheets for styling the page -->
+    <!-- External CSS stylesheets for styling the page -->
     <link rel="stylesheet" href="./Starbase/Salon/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./Starbase/Salon/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./Starbase/Salon/css/flaticon.css" />
@@ -160,7 +160,7 @@ include 'frontend_query.php';
         </div>
     </header>
 
-    <!-- Hero section with image slideshow -->
+    <!-- Carousel-->
     <section class="hero-section">
         <div class="hero-slider owl-carousel">
             <!-- Slide 1 -->
@@ -192,7 +192,7 @@ include 'frontend_query.php';
         </div>
     </section>
 
-    <!-- Services section -->
+    <!-- Services Section -->
     <section class="services-section spad">
         <div class="container">
             <!-- Section title and icons -->
@@ -203,22 +203,18 @@ include 'frontend_query.php';
             <!-- Service items -->
             <div class="row services">
                 <div class="col-lg-3 col-md-6 service-item">
-                    <!-- <i class="flaticon-005-coffee-1"></i> -->
                     <img src="Starbase/Salon/img/icons/hair.png">
                     <h3>HAIR CUT</h3>
                 </div>
                 <div class="col-lg-3 col-md-6 service-item">
-                    <!-- <i class="flaticon-016-pancake"></i> -->
                     <img src="Starbase/Salon/img/icons/hairdryer.png">
                     <h3>HAIR COLOR</h3>
                 </div>
                 <div class="col-lg-3 col-md-6 service-item">
-                    <!-- <i class="flaticon-008-soup"></i> -->
                     <img src="Starbase/Salon/img/icons/sauna.png">
                     <h3>FACIAL</h3>
                 </div>
                 <div class="col-lg-3 col-md-6 service-item">
-                    <!-- <i class="flaticon-032-hamburger"></i> -->
                     <img src="Starbase/Salon/img/icons/massage (1).png">
                     <h3>MASSAGE</h3>
                 </div>
@@ -226,10 +222,9 @@ include 'frontend_query.php';
         </div>
     </section>
 
-    <!-- Image gallery sections -->
+    <!-- Image Gallery Sections -->
     <div class="gallery">
         <div class="container5">
-            <!-- Gallery box for "Hair Cut" -->
             <div class="box">
                 <div class="imgBox">
                     <img src="./Starbase/Salon/img/hair.jpeg">
@@ -241,7 +236,6 @@ include 'frontend_query.php';
                 </div>
             </div>
            
-            <!-- Gallery box for "Hair Color" -->
             <div class="box">
                 <div class="imgBox">
                     <img src="./Starbase/Salon/img/hcolor.jpeg">
@@ -256,7 +250,6 @@ include 'frontend_query.php';
     </div>
     <div class="gallery">
         <div class="container5">
-            <!-- Gallery box for "Facials" -->
             <div class="box">
                 <div class="imgBox">
                     <img src="./Starbase/Salon/img/facial.jpeg">
@@ -267,7 +260,6 @@ include 'frontend_query.php';
                     </h2>
                 </div>
 
-            <!-- Gallery box for "Massage" -->
             </div>
             <div class="box">
                 <div class="imgBox">
@@ -303,6 +295,7 @@ include 'frontend_query.php';
                         <select type="text" name="service" required>
                             <option value="" disabled selected>Service Type</option>
                             <?php while ($row = mysqli_fetch_assoc($service_query)) { ?>
+                               
                                 <!-- Dropdown options for service types -->
                                 <option value="<?= $row['sid'] ?>"><?= $row['s_name']; ?></option>
                             <?php } ?>
