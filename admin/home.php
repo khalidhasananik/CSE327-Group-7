@@ -1,6 +1,6 @@
 <?php
-    include '../config/db_connection.php';
-    include '../config/constants.php';
+    include '../config/db_connection.php';// Include the database connection file.
+    include '../config/constants.php';// Include the constants file.
 ?>
 <!doctype html>
 <html lang="en">
@@ -26,7 +26,7 @@
     </nav> -->
 
     <?php
-        include 'nav.php';
+        include 'nav.php';// Include the navigation bar.
     ?>
 
     <div class="card bg-light text-dark mt-5">
