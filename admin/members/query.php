@@ -1,11 +1,12 @@
 <?php
-    include '../../config/db_connection.php';
-    include '../../config/constants.php';
+    include '../../config/db_connection.php';// Include the database connection file
+    include '../../config/constants.php';// Include the constants file for configuration
 
     // =========== Fetch Member List ==========
     // $select = "SELECT members.*, plans.* FROM `members` LEFT JOIN plans ON members.pid = plans.pid";
     // $s_query = mysqli_query($conn, $select);
 
+    // Check if the member-search-btn form is submitted
     if (isset($_POST['member-search-btn'])) {
         $search = $_POST['search'];
         // $_SESSION['search'] = $search;
@@ -14,6 +15,7 @@
 
     if ($_GET['search']) {
         $search = $_GET['search'];
+        // Build a SQL query to search for members based on the provided search criteria
         $select = "SELECT members.*, plans.* FROM `members` LEFT JOIN plans ON members.pid = plans.pid WHERE phone LIKE '$search%' OR email LIKE '$search%' OR mname LIKE '$search%' OR joindate LIKE '$search%'";
         $s_query = mysqli_query($conn, $select);
     } else {
