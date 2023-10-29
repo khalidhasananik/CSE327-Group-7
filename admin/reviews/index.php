@@ -67,6 +67,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            // Path: admin/reviews/index.php
                             <?php $id = 1; while ($row = mysqli_fetch_assoc($s_query)) {?>
                             <tr class="middle-td">
                                 <td scope="row"><?= $id++;?></td>
@@ -102,6 +103,11 @@
 
 </html>
 
+
+/**
+* If del-review is set then delete review
+* else fetch all reviews
+ */
 <?php
     } else {
         header("location:$baseURL/admin/index.php?msg=login_first");
