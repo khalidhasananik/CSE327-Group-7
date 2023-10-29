@@ -1,6 +1,6 @@
 # Welcome to STARBASE - CSE327 Group-7
 
-Hello there, and welcome to the STARBASE project, brought to you by CSE327 Group-7! We're excited to have you on board as we embark on this exciting journey to create an amazing website.
+Hello there, and welcome to the STARBASE project, brought to you by CSE327 Group-7! We're excited to have you on board as we embark on this exciting journey to create a fantastic website.
 
 ## About STARBASE
 
