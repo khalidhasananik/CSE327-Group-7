@@ -1,10 +1,13 @@
 <?php
-    include '../config/db_connection.php';
-    include '../config/constants.php';
+    include '../config/db_connection.php';// Include the database connection file.
+    include '../config/constants.php';// Include the constants file.
 
+    // Function to determine the active class for navigation link
     function getClassesOfLink($requestUri) {
         $current_file_name = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-
+        
+        // Check if the current file name contains the request URI
+        // If true, add 'active' class; otherwise, use the default 'nav-link' class
         if (strpos($current_file_name, $requestUri))
             echo 'class="nav-link active"';
         else
