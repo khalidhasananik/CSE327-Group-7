@@ -6,6 +6,10 @@ Hello there, and welcome to the STARBASE project, brought to you by CSE327 Group
 
 ![Discord](https://img.shields.io/discord/807619926855516201)
 
+![GitHub contributors](https://img.shields.io/github/contributors/khalidhasananik/CSE327-Group-7)
+
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/khalidhasananik/CSE327-Group-7)
+
 
 ## About STARBASE
 
