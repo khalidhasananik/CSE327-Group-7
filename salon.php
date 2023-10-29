@@ -14,11 +14,15 @@ include 'frontend_query.php';
     <meta name="keywords" content="restaurant, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Link to the website's favicon -->
     <link href="./Starbase/Salon/img/logo.jpeg" rel="shortcut icon" />
+    
+    <!-- Link to external fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap"
         rel="stylesheet" />
 
+    <!-- Link to external CSS stylesheets for styling the page -->
     <link rel="stylesheet" href="./Starbase/Salon/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./Starbase/Salon/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./Starbase/Salon/css/flaticon.css" />
@@ -97,21 +101,24 @@ include 'frontend_query.php';
 </head>
 
 <body>
-
+    <!-- Preloader -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
+    <!-- Header section -->
     <header class="header-section">
         <div class="header-warp">
             <div class="site-logo">
                 <h2>STARBASE</h2>
             </div>
 
+            <!-- Navigation menu switch icon -->
             <div class="nav-switch">
                 <i class="fa fa-bars"></i>
             </div>
 
+            <!-- Main navigation menu -->
             <ul class="main-menu">
                 <li><a href="./index.php">HOME</a></li>
                 <li><a href="./programs.php">PROGRAMS</a></li>
@@ -121,6 +128,8 @@ include 'frontend_query.php';
                 <li><a href="./parlor.php">PARLOR</a></li>
                 <li>
                     <?php if ($_SESSION['member_logged_in'] == true) { ?>
+                        
+                        <!-- User dropdown menu for logged-in users -->
                         <div class="dropdown">
                             <a style="color: #fff;" class="active">
                             <?php echo strtoupper($_SESSION['memberName']); ?>
@@ -131,11 +140,13 @@ include 'frontend_query.php';
                             </div>
                         </div>
                     <?php } else { ?>
+                        <!-- Link to login page for non-logged-in users -->
                         <a href="./login.php">LOGIN</a>
                     <?php } ?>
                 </li>
-                <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
             </ul>
+
+            <!-- Social media icons -->
             <div class="header-right">
                 <div class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center">
                     <a href="https://www.facebook.com/StarbaseClub/" target="_blank"><span
@@ -149,9 +160,10 @@ include 'frontend_query.php';
         </div>
     </header>
 
-
+    <!-- Hero section with image slideshow -->
     <section class="hero-section">
         <div class="hero-slider owl-carousel">
+            <!-- Slide 1 -->
             <div class="hs-item set-bg" data-setbg="./Starbase/Salon/img/slider/1.jpeg">
                 <div class="hs-content">
                     <div class="hsc-warp">
@@ -160,6 +172,7 @@ include 'frontend_query.php';
                     </div>
                 </div>
             </div>
+            <!-- Slide 2 -->
             <div class="hs-item set-bg" data-setbg="./Starbase/Salon/img/slider/2.jpeg">
                 <div class="hs-content">
                     <div class="hsc-warp">
@@ -168,6 +181,7 @@ include 'frontend_query.php';
                     </div>
                 </div>
             </div>
+            <!-- Slide 3 -->
             <div class="hs-item set-bg" data-setbg="./Starbase/Salon/img/slider/3.jpeg">
                 <div class="hs-content">
                     <div class="hsc-warp">
@@ -178,12 +192,15 @@ include 'frontend_query.php';
         </div>
     </section>
 
+    <!-- Services section -->
     <section class="services-section spad">
         <div class="container">
+            <!-- Section title and icons -->
             <div class="section-title">
                 <img src="Starbase/Salon/img/icons/salon.png">
                 <h2>Our Services</h2>
             </div>
+            <!-- Service items -->
             <div class="row services">
                 <div class="col-lg-3 col-md-6 service-item">
                     <!-- <i class="flaticon-005-coffee-1"></i> -->
@@ -209,8 +226,10 @@ include 'frontend_query.php';
         </div>
     </section>
 
+    <!-- Image gallery sections -->
     <div class="gallery">
         <div class="container5">
+            <!-- Gallery box for "Hair Cut" -->
             <div class="box">
                 <div class="imgBox">
                     <img src="./Starbase/Salon/img/hair.jpeg">
@@ -221,6 +240,8 @@ include 'frontend_query.php';
                     </h2>
                 </div>
             </div>
+           
+            <!-- Gallery box for "Hair Color" -->
             <div class="box">
                 <div class="imgBox">
                     <img src="./Starbase/Salon/img/hcolor.jpeg">
@@ -235,6 +256,7 @@ include 'frontend_query.php';
     </div>
     <div class="gallery">
         <div class="container5">
+            <!-- Gallery box for "Facials" -->
             <div class="box">
                 <div class="imgBox">
                     <img src="./Starbase/Salon/img/facial.jpeg">
@@ -244,6 +266,8 @@ include 'frontend_query.php';
                         <span></span>
                     </h2>
                 </div>
+
+            <!-- Gallery box for "Massage" -->
             </div>
             <div class="box">
                 <div class="imgBox">
@@ -258,6 +282,7 @@ include 'frontend_query.php';
         </div>
     </div>
 
+    <!-- Booking section -->
     <section class="services-section spad">
         <div class="container2">
             <div class="about-us">
@@ -278,6 +303,7 @@ include 'frontend_query.php';
                         <select type="text" name="service" required>
                             <option value="" disabled selected>Service Type</option>
                             <?php while ($row = mysqli_fetch_assoc($service_query)) { ?>
+                                <!-- Dropdown options for service types -->
                                 <option value="<?= $row['sid'] ?>"><?= $row['s_name']; ?></option>
                             <?php } ?>
                         </select>
@@ -289,6 +315,7 @@ include 'frontend_query.php';
         </div>
     </section>
 
+    <!-- Footer section -->
     <footer class="footer-section">
         <div class="upper">
             <h1>GET IN TOUCH TODAY</h1>

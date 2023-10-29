@@ -14,11 +14,15 @@ include 'frontend_parlor.php';
     <meta name="keywords" content="restaurant, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Link to the website's favicon -->
     <link href="./Starbase/Parlor/img/logo.jpeg" rel="shortcut icon" />
+    
+    <!-- Link to external fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap"
         rel="stylesheet" />
 
+    <!-- Link to external CSS stylesheets for styling the page -->    
     <link rel="stylesheet" href="./Starbase/Parlor/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./Starbase/Parlor/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./Starbase/Parlor/css/flaticon.css" />
@@ -97,21 +101,24 @@ include 'frontend_parlor.php';
 </head>
 
 <body>
-
+    <!-- Preloader -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
+    <!-- Header section -->
     <header class="header-section">
         <div class="header-warp">
             <div class="site-logo">
                 <h2>STARBASE</h2>
             </div>
 
+            <!-- Navigation menu switch icon -->
             <div class="nav-switch">
                 <i class="fa fa-bars"></i>
             </div>
 
+            <!-- Main navigation menu -->
             <ul class="main-menu">
                 <li><a href="./index.php">HOME</a></li>
                 <li><a href="./programs.php">PROGRAMS</a></li>
