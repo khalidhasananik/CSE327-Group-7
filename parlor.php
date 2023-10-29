@@ -128,6 +128,7 @@ include 'frontend_parlor.php';
                 <li><a href="./parlor.php" class="active">PARLOR</a></li>
                 <li>
                     <?php if ($_SESSION['member_logged_in'] == true) { ?>
+                        <!-- User dropdown menu for logged-in users -->
                         <div class="dropdown">
                             <a style="color: #fff;" class="active">
                             <?php echo strtoupper($_SESSION['memberName']); ?>
@@ -138,11 +139,13 @@ include 'frontend_parlor.php';
                             </div>
                         </div>
                     <?php } else { ?>
+                         <!-- Link to login page for non-logged-in users -->
                         <a href="./login.php">LOGIN</a>
                     <?php } ?>
                 </li>
-                <!-- <li><a href="./admin/index.php">ADMIN</a></li> -->
             </ul>
+        
+            <!-- Header right section with social media icons -->
             <div class="header-right">
                 <div class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center">
                     <a href="https://www.facebook.com/StarbaseClub/" target="_blank"><span
@@ -156,9 +159,10 @@ include 'frontend_parlor.php';
         </div>
     </header>
 
-
+    <!-- Carousel -->
     <section class="hero-section">
         <div class="hero-slider owl-carousel">
+            <!-- Slide 1 -->
             <div class="hs-item set-bg" data-setbg="./Starbase/Parlor/img/slider/1.jpeg">
                 <div class="hs-content">
                     <div class="hsc-warp">
@@ -167,6 +171,7 @@ include 'frontend_parlor.php';
                     </div>
                 </div>
             </div>
+            <!-- Slide 2 -->
             <div class="hs-item set-bg" data-setbg="./Starbase/Parlor/img/slider/2.jpeg">
                 <div class="hs-content">
                     <div class="hsc-warp">
@@ -175,6 +180,7 @@ include 'frontend_parlor.php';
                     </div>
                 </div>
             </div>
+            <!-- Slide 3 -->
             <div class="hs-item set-bg" data-setbg="./Starbase/Parlor/img/slider/3.jpeg">
                 <div class="hs-content">
                     <div class="hsc-warp">
@@ -185,12 +191,16 @@ include 'frontend_parlor.php';
         </div>
     </section>
 
+    <!-- Services section -->
     <section class="services-section spad">
         <div class="container">
+            <!-- Section title and icons -->    
             <div class="section-title">
                 <img src="Starbase/Parlor/img/icons/parlor.png">
                 <h2>Our Services</h2>
             </div>
+            
+            <!-- Service items -->
             <div class="row services">
                 <div class="col-lg-3 col-md-6 service-item">
                     <img src="Starbase/Parlor/img/icons/hair.png">
@@ -212,8 +222,11 @@ include 'frontend_parlor.php';
         </div>
     </section>
 
+    <!-- Image gallery section -->
     <div class="gallery">
         <div class="container5">
+
+            <!-- Gallery box for "Hair Cut" -->    
             <div class="box">
                 <div class="imgBox">
                     <img src="./Starbase/Parlor/img/hcut.jpeg">
@@ -224,6 +237,8 @@ include 'frontend_parlor.php';
                     </h2>
                 </div>
             </div>
+
+            <!-- Gallery box for "Hair Color" -->
             <div class="box">
                 <div class="imgBox">
                     <img src="./Starbase/Parlor/img/hcolor.jpeg">
@@ -238,6 +253,7 @@ include 'frontend_parlor.php';
     </div>
     <div class="gallery">
         <div class="container5">
+            <!-- Gallery box for "Facials" -->
             <div class="box">
                 <div class="imgBox">
                     <img src="./Starbase/Parlor/img/facial.jpeg">
@@ -248,6 +264,7 @@ include 'frontend_parlor.php';
                     </h2>
                 </div>
             </div>
+            <!-- Gallery box for "Massage" -->
             <div class="box">
                 <div class="imgBox">
                     <img src="./Starbase/Parlor/img/massage.jpeg">
@@ -261,7 +278,7 @@ include 'frontend_parlor.php';
         </div>
     </div>
 
-
+     <!-- Booking section -->
     <section class="services-section spad">
         <div class="container2">
             <div class="about-us">
@@ -270,7 +287,8 @@ include 'frontend_parlor.php';
             </div>
             <div class="main">
                 <input type="checkbox" id="chk" aria-hidden="true">
-
+                
+                <!-- Booking form -->
                 <div class="signup">
                     <form action="frontend_parlor.php" method="post">
                         <label for="chk" aria-hidden="true">Booking</label>
@@ -282,6 +300,7 @@ include 'frontend_parlor.php';
                         <select type="text" name="service" required>
                             <option value="" disabled selected>Service Type</option>
                             <?php while ($row = mysqli_fetch_assoc($service_query)) { ?>
+                                  <!-- Dropdown options for service types -->
                                 <option value="<?= $row['sid'] ?>"><?= $row['s_name']; ?></option>
                             <?php } ?>
                         </select>
@@ -293,6 +312,7 @@ include 'frontend_parlor.php';
         </div>
     </section>
 
+    <!-- Footer section -->
     <footer class="footer-section">
         <div class="upper">
             <h1>GET IN TOUCH TODAY</h1>
@@ -328,6 +348,8 @@ include 'frontend_parlor.php';
 
     </footer>
 
+    
+    <!-- JavaScript and external script references -->
     <script src="./Starbase/Parlor/js/jquery-3.2.1.min.js"></script>
     <script src="./Starbase/Parlor/js/bootstrap.min.js"></script>
     <script src="./Starbase/Parlor/js/owl.carousel.min.js"></script>
