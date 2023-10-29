@@ -1,4 +1,4 @@
-![github](https://github.com/khalidhasananik/CSE327-Group-7/assets/83982215/f6431822-cf3b-498f-9ba7-d3f63994af6d)
+![github (2)](https://github.com/khalidhasananik/CSE327-Group-7/assets/83982215/26064ff9-1034-47f8-8614-5ec90aaa6f4e)
 
 # Welcome to STARBASE - CSE327 Group-7
 
