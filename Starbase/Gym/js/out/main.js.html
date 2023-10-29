@@ -1,4 +1,32 @@
-'use strict';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: main.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: main.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
 
 $(window).on('load', function () {
 	/*------------------
@@ -47,12 +75,12 @@ $(window).on('load', function () {
 	var dot = $('.hero-slider .owl-dot');
 	dot.each(function () {
 		var index = $(this).index() + 1;
-		if (index < 10) {
+		if (index &lt; 10) {
 			$(this).html('0').append(index);
-			$(this).append('<span>.</span>');
+			$(this).append('&lt;span>.&lt;/span>');
 		} else {
 			$(this).html(index);
-			$(this).append('<span>.</span>');
+			$(this).append('&lt;span>.&lt;/span>');
 		}
 	});
 	function currentHSnumber() {
@@ -72,14 +100,14 @@ $(window).on('load', function () {
 		var cpid = $(this).data('cpid');
 
 		$(this).append(
-			'<div class="' +
+			'&lt;div class="' +
 				cpid +
-				'"></div><div class="progress-value"><h3>' +
+				'">&lt;/div>&lt;div class="progress-value">&lt;h3>' +
 				cpvalue +
-				'%</h3></div>'
+				'%&lt;/h3>&lt;/div>'
 		);
 
-		if (cpvalue < 100) {
+		if (cpvalue &lt; 100) {
 			$('.' + cpid).circleProgress({
 				value: '0.' + cpvalue,
 				size: 123,
@@ -184,23 +212,23 @@ document.querySelector('#check').addEventListener('click', function () {
 		let gender = userGender.value;
 		// let bmi = w / ((h / 100) * (h / 100));
 		let bmi = divide(w, multiply(divideBy100(h), divideBy100(h)));
-		if (bmi < 18.5) {
+		if (bmi &lt; 18.5) {
 			//underweight
 			if (gender === 'Male') {
 				//Male
-				if (age < 20) {
+				if (age &lt; 20) {
 					//Teenage
 					document.querySelector('.sg1').style.display = 'flex';
-				} else if (age >= 20 && age < 30) {
+				} else if (age >= 20 &amp;&amp; age &lt; 30) {
 					//20s
 					document.querySelector('.sg2').style.display = 'flex';
-				} else if (age >= 30 && age < 40) {
+				} else if (age >= 30 &amp;&amp; age &lt; 40) {
 					//30s
 					document.querySelector('.sg3').style.display = 'flex';
-				} else if (age >= 40 && age < 50) {
+				} else if (age >= 40 &amp;&amp; age &lt; 50) {
 					//40s
 					document.querySelector('.sg4').style.display = 'flex';
-				} else if (age >= 50 && age < 60) {
+				} else if (age >= 50 &amp;&amp; age &lt; 60) {
 					//50s
 					document.querySelector('.sg5').style.display = 'flex';
 				} else if (age >= 60) {
@@ -209,19 +237,19 @@ document.querySelector('#check').addEventListener('click', function () {
 				}
 			} else if (gender === 'Female') {
 				//Female
-				if (age < 20) {
+				if (age &lt; 20) {
 					//Teenage
 					document.querySelector('.sg7').style.display = 'flex';
-				} else if (age >= 20 && age < 30) {
+				} else if (age >= 20 &amp;&amp; age &lt; 30) {
 					//20s
 					document.querySelector('.sg8').style.display = 'flex';
-				} else if (age >= 30 && age < 40) {
+				} else if (age >= 30 &amp;&amp; age &lt; 40) {
 					//30s
 					document.querySelector('.sg9').style.display = 'flex';
-				} else if (age >= 40 && age < 50) {
+				} else if (age >= 40 &amp;&amp; age &lt; 50) {
 					//40s
 					document.querySelector('.sg10').style.display = 'flex';
-				} else if (age >= 50 && age < 60) {
+				} else if (age >= 50 &amp;&amp; age &lt; 60) {
 					//50s
 					document.querySelector('.sg11').style.display = 'flex';
 				} else if (age >= 60) {
@@ -229,23 +257,23 @@ document.querySelector('#check').addEventListener('click', function () {
 					document.querySelector('.sg12').style.display = 'flex';
 				}
 			}
-		} else if (bmi >= 18.5 && bmi < 25) {
+		} else if (bmi >= 18.5 &amp;&amp; bmi &lt; 25) {
 			//healthy
 			if (gender === 'Male') {
 				//Male
-				if (age < 20) {
+				if (age &lt; 20) {
 					//Teenage
 					document.querySelector('.sg13').style.display = 'flex';
-				} else if (age >= 20 && age < 30) {
+				} else if (age >= 20 &amp;&amp; age &lt; 30) {
 					//20s
 					document.querySelector('.sg14').style.display = 'flex';
-				} else if (age >= 30 && age < 40) {
+				} else if (age >= 30 &amp;&amp; age &lt; 40) {
 					//30s
 					document.querySelector('.sg15').style.display = 'flex';
-				} else if (age >= 40 && age < 50) {
+				} else if (age >= 40 &amp;&amp; age &lt; 50) {
 					//40s
 					document.querySelector('.sg16').style.display = 'flex';
-				} else if (age >= 50 && age < 60) {
+				} else if (age >= 50 &amp;&amp; age &lt; 60) {
 					//50s
 					document.querySelector('.sg17').style.display = 'flex';
 				} else if (age >= 60) {
@@ -254,19 +282,19 @@ document.querySelector('#check').addEventListener('click', function () {
 				}
 			} else if (gender === 'Female') {
 				//Female
-				if (age < 20) {
+				if (age &lt; 20) {
 					//Teenage
 					document.querySelector('.sg19').style.display = 'flex';
-				} else if (age >= 20 && age < 30) {
+				} else if (age >= 20 &amp;&amp; age &lt; 30) {
 					//20s
 					document.querySelector('.sg20').style.display = 'flex';
-				} else if (age >= 30 && age < 40) {
+				} else if (age >= 30 &amp;&amp; age &lt; 40) {
 					//30s
 					document.querySelector('.sg21').style.display = 'flex';
-				} else if (age >= 40 && age < 50) {
+				} else if (age >= 40 &amp;&amp; age &lt; 50) {
 					//40s
 					document.querySelector('.sg22').style.display = 'flex';
-				} else if (age >= 50 && age < 60) {
+				} else if (age >= 50 &amp;&amp; age &lt; 60) {
 					//50s
 					document.querySelector('.sg23').style.display = 'flex';
 				} else if (age >= 60) {
@@ -274,23 +302,23 @@ document.querySelector('#check').addEventListener('click', function () {
 					document.querySelector('.sg24').style.display = 'flex';
 				}
 			}
-		} else if (bmi >= 25 && bmi < 30) {
+		} else if (bmi >= 25 &amp;&amp; bmi &lt; 30) {
 			//overweight
 			if (gender === 'Male') {
 				//Male
-				if (age < 20) {
+				if (age &lt; 20) {
 					//Teenage
 					document.querySelector('.sg25').style.display = 'flex';
-				} else if (age >= 20 && age < 30) {
+				} else if (age >= 20 &amp;&amp; age &lt; 30) {
 					//20s
 					document.querySelector('.sg26').style.display = 'flex';
-				} else if (age >= 30 && age < 40) {
+				} else if (age >= 30 &amp;&amp; age &lt; 40) {
 					//30s
 					document.querySelector('.sg27').style.display = 'flex';
-				} else if (age >= 40 && age < 50) {
+				} else if (age >= 40 &amp;&amp; age &lt; 50) {
 					//40s
 					document.querySelector('.sg28').style.display = 'flex';
-				} else if (age >= 50 && age < 60) {
+				} else if (age >= 50 &amp;&amp; age &lt; 60) {
 					//50s
 					document.querySelector('.sg29').style.display = 'flex';
 				} else if (age >= 60) {
@@ -299,19 +327,19 @@ document.querySelector('#check').addEventListener('click', function () {
 				}
 			} else if (gender === 'Female') {
 				//Female
-				if (age < 20) {
+				if (age &lt; 20) {
 					//Teenage
 					document.querySelector('.sg31').style.display = 'flex';
-				} else if (age >= 20 && age < 30) {
+				} else if (age >= 20 &amp;&amp; age &lt; 30) {
 					//20s
 					document.querySelector('.sg32').style.display = 'flex';
-				} else if (age >= 30 && age < 40) {
+				} else if (age >= 30 &amp;&amp; age &lt; 40) {
 					//30s
 					document.querySelector('.sg33').style.display = 'flex';
-				} else if (age >= 40 && age < 50) {
+				} else if (age >= 40 &amp;&amp; age &lt; 50) {
 					//40s
 					document.querySelector('.sg34').style.display = 'flex';
-				} else if (age >= 50 && age < 60) {
+				} else if (age >= 50 &amp;&amp; age &lt; 60) {
 					//50s
 					document.querySelector('.sg35').style.display = 'flex';
 				} else if (age >= 60) {
@@ -323,19 +351,19 @@ document.querySelector('#check').addEventListener('click', function () {
 			//obese
 			if (gender === 'Male') {
 				//Male
-				if (age < 20) {
+				if (age &lt; 20) {
 					//Teenage
 					document.querySelector('.sg37').style.display = 'flex';
-				} else if (age >= 20 && age < 30) {
+				} else if (age >= 20 &amp;&amp; age &lt; 30) {
 					//20s
 					document.querySelector('.sg38').style.display = 'flex';
-				} else if (age >= 30 && age < 40) {
+				} else if (age >= 30 &amp;&amp; age &lt; 40) {
 					//30s
 					document.querySelector('.sg39').style.display = 'flex';
-				} else if (age >= 40 && age < 50) {
+				} else if (age >= 40 &amp;&amp; age &lt; 50) {
 					//40s
 					document.querySelector('.sg40').style.display = 'flex';
-				} else if (age >= 50 && age < 60) {
+				} else if (age >= 50 &amp;&amp; age &lt; 60) {
 					//50s
 					document.querySelector('.sg41').style.display = 'flex';
 				} else if (age >= 60) {
@@ -344,19 +372,19 @@ document.querySelector('#check').addEventListener('click', function () {
 				}
 			} else if (gender === 'Female') {
 				//Female
-				if (age < 20) {
+				if (age &lt; 20) {
 					//Teenage
 					document.querySelector('.sg43').style.display = 'flex';
-				} else if (age >= 20 && age < 30) {
+				} else if (age >= 20 &amp;&amp; age &lt; 30) {
 					//20s
 					document.querySelector('.sg44').style.display = 'flex';
-				} else if (age >= 30 && age < 40) {
+				} else if (age >= 30 &amp;&amp; age &lt; 40) {
 					//30s
 					document.querySelector('.sg45').style.display = 'flex';
-				} else if (age >= 40 && age < 50) {
+				} else if (age >= 40 &amp;&amp; age &lt; 50) {
 					//40s
 					document.querySelector('.sg46').style.display = 'flex';
-				} else if (age >= 50 && age < 60) {
+				} else if (age >= 50 &amp;&amp; age &lt; 60) {
 					//50s
 					document.querySelector('.sg47').style.display = 'flex';
 				} else if (age >= 60) {
@@ -367,3 +395,26 @@ document.querySelector('#check').addEventListener('click', function () {
 		}
 	}
 });
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#divide">divide</a></li><li><a href="global.html#divideBy100">divideBy100</a></li><li><a href="global.html#multiply">multiply</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sun Oct 29 2023 16:10:33 GMT+0600 (Bangladesh Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
