@@ -22,7 +22,7 @@ Let's introduce the talented individuals behind STARBASE:
 
 ## Installation 
 
-- First, download the project
+- First, download the project.
 
 ![image](https://github.com/khalidhasananik/CSE327-Group-7/assets/83982215/eafb9e18-fb01-4ef2-808c-c2f8f8a3b8a5)
 
@@ -42,5 +42,7 @@ Let's introduce the talented individuals behind STARBASE:
 ![image](https://github.com/khalidhasananik/CSE327-Group-7/assets/83982215/9ee6ac0e-6f5f-4304-84de-e3ea4d20ca58)
   
 - Type `localhost/starbase` in your browser and press enter.
-  
+
+![image](https://github.com/khalidhasananik/CSE327-Group-7/assets/83982215/457a37a6-37aa-4f2e-aa32-d27e24c71a31)
+
 Happy coding! 🚀
