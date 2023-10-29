@@ -9,8 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="./Starbase/Login/img/logo.jpeg" rel="shortcut icon" />
+
+    <!-- external font stylesheet-->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet" />
 
+    <!-- Stylesheets for CSS and Fonts -->
     <link rel="stylesheet" href="./Starbase/Login/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./Starbase/Login/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./Starbase/Login/css/flaticon.css" />
@@ -90,11 +93,12 @@
 
 <body>
 
+    <!-- Loader -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
-
+    <!-- Header Section -->
     <header class="header-section">
         <div class="header-warp">
             <div class="site-logo">
@@ -105,6 +109,7 @@
                 <i class="fa fa-bars"></i>
             </div>
 
+            <!-- Main Menu -->
             <ul class="main-menu">
                 <li><a href="./index.php">HOME</a></li>
                 <li><a href="./programs.php">PROGRAMS</a></li>
@@ -129,6 +134,8 @@
                 </li>
                 <li><a href="./admin/index.php">ADMIN</a></li>
             </ul>
+
+            <!-- Header Right Section -->
             <div class="header-right">
                 <div class="icon d-block pr-4 mr-2 d-flex topper justify-content-center align-items-center">
                     <a href="https://www.facebook.com/StarbaseClub/" target="_blank"><span class="icon-facebook"></span></a>
@@ -139,11 +146,13 @@
         </div>
     </header>
 
+    <!-- Services Section -->
     <section class="services-section spad">
         <div class="container">
             <div class="main">
                 <input type="checkbox" id="chk" aria-hidden="true">
 
+                <!-- Sign-Up Form -->
                 <div class="signup">
                     <form action="frontend_auth.php" method="post">
                         <label for="chk" aria-hidden="true">Login</label>
@@ -153,6 +162,7 @@
                     </form>
                 </div>
 
+                <!-- Login Form -->
                 <div class="login">
                     <form action="frontend_auth.php" method="post">
                         <label for="chk" aria-hidden="true">Sign Up</label>
@@ -176,6 +186,7 @@
         </div>
     </section>
 
+    <!-- JavaScript Libraries -->
     <script src="./Starbase/Login/js/jquery-3.2.1.min.js"></script>
     <script src="./Starbase/Login/js/bootstrap.min.js"></script>
     <script src="./Starbase/Login/js/owl.carousel.min.js"></script>
