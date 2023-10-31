@@ -114,6 +114,8 @@ function divideBy100(number) {
 	return number / 100;
 }
 
+module.exports = divideBy100;
+
 /**
  * divide
  * @param {*} numberOne any number
